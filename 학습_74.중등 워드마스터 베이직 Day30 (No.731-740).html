@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><script>(function(){var ua=navigator.userAgent||'';if(/KAKAOTALK/i.test(ua)){location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(location.href);return;}if(/NAVER|Instagram|FBAN|FBAV|Line\//i.test(ua)){window.addEventListener('DOMContentLoaded',function(){var b=document.createElement('div');b.style.cssText='position:fixed;top:0;left:0;right:0;background:#fff3cd;color:#7a5900;padding:10px 14px;font-size:13px;text-align:center;z-index:99999;border-bottom:2px solid #e8b93b;font-family:sans-serif;';b.innerHTML='🔊 이 앱 안에서는 소리가 안 나올 수 있어요. 우측 상단 메뉴에서 <b>다른 브라우저로 열기</b>를 눌러주세요.';document.body.insertBefore(b,document.body.firstChild);});}})();</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학습_74. 중등 워드마스터 베이직 Day30 (No.731-740)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI','Apple SD Gothic Neo',sans-serif;background:#f0f4f8;color:#2d3a4a;min-height:100vh}
+
+/* 헤더 */
+header{background:#fff;padding:14px 24px;border-bottom:2px solid #d0dcea;display:flex;align-items:center;gap:14px;flex-wrap:wrap;box-shadow:0 2px 6px rgba(0,0,0,.07)}
+header h1{font-size:15px;color:#2a6db5;font-weight:700}
+.badge{background:#e8f0fb;color:#5080b0;font-size:12px;padding:3px 10px;border-radius:20px}
+
+/* 탭 */
+.tabs{display:flex;background:#fff;padding:0 10px;gap:2px;border-bottom:2px solid #d0dcea;overflow-x:auto;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.tab-btn{padding:10px 13px;font-size:13px;font-weight:600;color:#8090a8;border:none;background:none;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s}
+.tab-btn:hover{color:#4070b0}
+.tab-btn.active{color:#2a6db5;border-bottom-color:#2a6db5}
+
+/* 패널 */
+.panel{display:none;padding:20px 18px;max-width:820px;margin:0 auto}
+.panel.active{display:block}
+.panel-title{font-size:17px;font-weight:700;color:#2a6db5;margin-bottom:5px}
+.panel-desc{font-size:13px;color:#8090a8;margin-bottom:16px;line-height:1.6}
+
+/* 지문 박스 */
+.passage-box{background:#fff;border:1px solid #d0dcea;border-radius:12px;padding:22px;margin-bottom:16px;line-height:2.1;font-size:16px;color:#2d3a4a;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.p-title{font-size:13px;color:#8090a8;margin-bottom:10px;font-style:italic;font-weight:600}
+.hl{color:#c05010;font-weight:700}
+
+/* 버튼 */
+.ctrl-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.btn{padding:9px 18px;border-radius:8px;border:none;font-size:14px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-play{background:#2a6db5;color:#fff}.btn-play:hover{background:#3580cc}
+.btn-stop{background:#c0392b;color:#fff}.btn-stop:hover{background:#e74c3c}
+.btn-sm{background:#fff;color:#4070b0;border:1px solid #b0c8e8;padding:7px 13px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-sm:hover{background:#e8f0fb}
+.btn-sm.sel{background:#dceeff;border-color:#2a6db5;color:#2a6db5}
+.spd-label{font-size:12px;color:#8090a8}
+
+/* 현재 문장 */
+.now-box{background:#e8f4ff;border:1px solid #b0d0f0;border-radius:10px;padding:13px 18px;margin-bottom:13px;font-size:16px;color:#1a3a60;line-height:1.7;min-height:52px;display:flex;align-items:center}.now-box .now-txt{flex:1}
+.now-box .lbl{color:#5090c0;font-size:12px;font-weight:700;margin-right:8px}
+
+/* 문장 카드 */
+.sent-list{display:flex;flex-direction:column;gap:8px}
+.sent-card{background:#fff;border:1px solid #d0dcea;border-radius:10px;padding:11px 15px;display:flex;align-items:center;gap:11px;box-shadow:0 1px 3px rgba(0,0,0,.04);transition:border-color .2s}
+.sent-card.playing{border-color:#2a6db5;background:#f0f7ff}
+.s-num{min-width:27px;height:27px;border-radius:50%;background:#e0ecf8;color:#2a6db5;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background .15s}
+.s-num:hover{background:#c0dcf0}
+.s-num.playing{background:#2a6db5;color:#fff}
+.s-txt{font-size:15px;color:#2d3a4a;line-height:1.6;flex:1}
+
+/* 따라말하기 */
+.shadow-box{background:#fff;border:1px solid #d0dcea;border-radius:14px;padding:44px 24px;text-align:center;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.shadow-box .mic{font-size:52px;margin-bottom:14px}
+.sh-status{font-size:17px;color:#3060a0;font-weight:700}
+.sh-hint{font-size:13px;color:#a0b0c0;margin-top:8px}
+.prog-row{display:flex;justify-content:center;gap:8px;margin-top:20px;flex-wrap:wrap}
+.prog-dot{width:12px;height:12px;border-radius:50%;background:#d0dcea;transition:background .3s}
+.prog-dot.done{background:#2a6db5}
+.prog-dot.cur{background:#e07030;transform:scale(1.3)}
+
+/* 단어장 */
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;margin-bottom:18px}
+.flip-card{height:120px;perspective:800px;cursor:pointer}
+.flip-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .4s}
+.flip-card.flipped .flip-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:13px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.flip-front{background:#fff;border:2px solid #d0dcea}
+.flip-back{background:#2a6db5;color:#fff;transform:rotateY(180deg)}
+.f-word{font-size:18px;font-weight:700;color:#1a3a60}
+.f-pos{font-size:11px;color:#8090a8;margin-top:3px}
+.f-snd{font-size:17px;margin-top:6px;color:#2a6db5}
+.f-mean{font-size:14px;font-weight:600}
+.f-ex{font-size:11px;margin-top:5px;color:#cce0ff;line-height:1.4}
+.sec-title{font-size:13px;font-weight:700;color:#5080a0;margin:14px 0 8px;padding-bottom:4px;border-bottom:1px solid #d0dcea}
+
+/* 숙어 카드 */
+.idiom-list{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.idiom-card{background:#fff;border:1px solid #d0dcea;border-radius:10px;padding:13px 16px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.idiom-phrase{font-size:15px;font-weight:700;color:#2a6db5}
+.idiom-mean{font-size:14px;color:#3a4a60;margin-top:3px}
+.idiom-ex{font-size:13px;color:#8090a8;font-style:italic;margin-top:4px}
+
+/* 받아쓰기 */
+.dict-list{display:flex;flex-direction:column;gap:10px}
+.dict-card{background:#fff;border:1px solid #d0dcea;border-radius:10px;padding:13px 15px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.d-num{min-width:34px;height:34px;border-radius:50%;background:#e0ecf8;color:#2a6db5;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background .15s}
+.d-num:hover{background:#c0dcf0}
+.d-num.pd{background:#2a6db5;color:#fff}
+.d-hint{font-size:13px;color:#a0b0c0;font-style:italic}
+
+/* 퀴즈 */
+.quiz-wrap{display:flex;flex-direction:column;gap:16px}
+.q-card{background:#fff;border:1px solid #d0dcea;border-radius:12px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.q-num{font-size:13px;font-weight:700;color:#5080a0;margin-bottom:6px}
+.q-text{font-size:15px;color:#2d3a4a;line-height:1.6;margin-bottom:4px}
+.q-ko{font-size:13px;color:#3a4a6a;font-style:italic;font-weight:500;margin-bottom:12px}
+.blank-span{display:inline-block;width:110px;height:1.2em;border-bottom:2.5px solid #2a6db5;vertical-align:middle;margin:0 4px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{background:#f4f8fc;border:1px solid #d0dcea;border-radius:8px;padding:9px 12px;font-size:14px;color:#2d3a4a;cursor:pointer;text-align:left;transition:all .15s}
+.opt:hover{background:#e0f0ff;border-color:#90b8e0}
+.opt.ok{background:#e8f8ee;border-color:#4caf50;color:#1a6030;font-weight:700}
+.opt.ng{background:#fdecea;border-color:#e74c3c;color:#8a1a1a}
+.opt:disabled{cursor:default}
+.exp{display:none;margin-top:11px;background:#f8fafc;border-left:3px solid #2a6db5;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;color:#3a4a60;line-height:1.7}
+.exp.show{display:block}
+.exp-lbl{color:#5060a0;font-style:italic;margin-bottom:3px;font-weight:600}
+
+/* 재배열 */
+.ro-desc{font-size:15px;font-weight:700;color:#2d3a4a;margin-bottom:16px;line-height:1.6}.ro-q{font-size:13px;color:#3a4a60;font-weight:700;margin-bottom:9px}
+.chip-area{display:flex;flex-wrap:wrap;gap:7px;padding:9px;border:1px dashed #b0c8e0;border-radius:8px;min-height:44px;background:#fafcff;margin-bottom:9px}
+.chip{background:#e0ecf8;color:#1a3a60;padding:6px 13px;border-radius:20px;font-size:14px;cursor:pointer;transition:all .15s;user-select:none;font-weight:500}
+.chip:hover{background:#c0d8f0}
+.chip.used{opacity:.3;cursor:default}
+.ans-area{min-height:40px;padding:8px 12px;border:1px solid #c0d8ea;border-radius:8px;margin-bottom:9px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:#fff}
+.ans-chip{background:#2a6db5;color:#fff;padding:5px 12px;border-radius:20px;font-size:14px;cursor:pointer;font-weight:500}
+.ans-chip:hover{background:#1a5090}
+.ro-result{font-size:13px;font-weight:700;min-height:20px;margin-top:4px}
+.ro-result.ok{color:#27a060}
+.ro-result.ng{color:#c0392b}
+
+/* 점수 바 */
+.score-bar{background:#fff;border-radius:10px;padding:12px 18px;display:flex;align-items:center;gap:14px;margin-bottom:16px;flex-wrap:wrap;border:1px solid #d0dcea;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.sc-item{font-size:14px;color:#6080a0}
+.sc-item strong{color:#c05010;font-size:18px}
+.btn-reset{margin-left:auto;background:#e8f0fb;color:#4070b0;border:none;padding:7px 14px;border-radius:8px;font-size:13px;cursor:pointer}
+.btn-reset:hover{background:#d0e4f8}
+
+@media(max-width:560px){
+  .opts{grid-template-columns:1fr}
+  .vocab-grid{grid-template-columns:repeat(2,1fr)}
+  .panel{padding:13px 11px}
+}
+.tts-tune{display:flex;align-items:center;gap:8px;background:#fff8e6;border:1px solid #f0d998;border-radius:10px;padding:8px 12px;margin:10px 0;font-size:13px;color:#7a5c00;flex-wrap:wrap}.tts-tune b{color:#5a4400}.tts-tune button{background:#ffe9a8;border:none;color:#5a4400;padding:5px 10px;border-radius:7px;font-size:13px;cursor:pointer;font-weight:600}.tts-tune button:hover{background:#ffdd80}.tts-tune .tt-reset{background:#f0e0b0;color:#7a5c00;font-weight:400}
+.tag-pos{display:inline-block;background:#e8f0fb;color:#2a6db5;border-radius:6px;padding:1px 7px;font-size:11px;font-weight:700;margin-right:4px}
+.tag-inv{background:rgba(255,255,255,.22);color:#fff}
+.f-mean{line-height:1.7}
+.audio-notice{display:none;background:#fff8e6;border:1px solid #f0d998;color:#7a5c00;border-radius:10px;padding:9px 14px;margin:10px auto 0;max-width:820px;font-size:12.5px;line-height:1.5}
+/* 한글 뜻 풀이 */
+.xp-list{display:flex;flex-direction:column;gap:12px}
+.xp-card{background:#fff;border:1px solid #d0dcea;border-radius:12px;padding:15px 17px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.xp-top{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.xp-no{min-width:26px;height:26px;border-radius:50%;background:#e0ecf8;color:#2a6db5;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.xp-word{font-size:19px;font-weight:800;color:#1a3a60}
+.xp-mean{font-size:15px;font-weight:700;color:#c05010;margin-bottom:8px}
+.xp-def{font-size:14.5px;color:#2d3a4a;line-height:1.8;background:#f4f8fc;border-radius:8px;padding:9px 12px;margin-bottom:8px}
+.xp-ex{font-size:14px;color:#3a4a60;line-height:1.7}
+.xp-lbl{display:inline-block;background:#2a6db5;color:#fff;border-radius:6px;font-size:11px;font-weight:700;padding:1px 7px;margin-right:4px}
+.xp-ex mark{background:#fff0b8;color:#7a3a00;font-weight:700;padding:0 2px;border-radius:3px}
+/* 낭독 */
+.read-card{align-items:flex-start}
+.read-box{flex:1}
+.rd-word{font-size:17px;font-weight:800;color:#1a3a60}
+.rd-sent{font-size:15px;color:#2d3a4a;line-height:1.6;margin-top:2px}
+.rd-mean{display:inline-block;font-size:14px;font-weight:700;color:#c05010;margin-top:5px}
+.rd-ko{font-size:13px;color:#5a6a85;margin-top:2px}
+.kohide{display:none}.read-card.ko-on .kohide{display:block}
+.btn-ko-row{margin-left:auto;flex-shrink:0;background:#fff;border:1.5px solid #c05010;color:#c05010;padding:5px 10px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}
+.btn-ko-row:hover{background:#fff2e8}
+.read-pair{display:flex;flex-direction:column;gap:5px;margin-bottom:9px}
+.s-num-w{min-width:42px;border-radius:14px;padding:0 6px}
+.tts-tune{margin:10px auto 0;max-width:820px}
+.btn-ko{background:#fff;border:1.5px solid #c05010;color:#c05010;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer}
+.btn-ko:hover{background:#fff2e8}
+/* 4지선다 */
+.step-head{display:flex;flex-direction:column;gap:2px;background:#eef4ff;border-left:4px solid #2a6db5;border-radius:0 8px 8px 0;padding:9px 13px;margin-top:6px}
+.step-head b{font-size:15px;color:#1a3a60}.step-head span{font-size:12.5px;color:#5a6a85}
+.q-en{font-size:18px;color:#1a3a60}
+.mini-snd{cursor:pointer;margin-left:2px}
+.exp-sub{color:#6a7a95;font-size:12.5px}
+.ro-ko{font-size:13px;color:#2a6db5;font-weight:600}
+.d-num.pd{background:#2a6db5;color:#fff}
+header{padding:12px 18px}
+.to-top{position:fixed;right:14px;bottom:18px;width:52px;height:56px;border-radius:6px;border:1px solid #cfd6e0;background:rgba(245,246,248,.96);color:#2b3544;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.18);display:none;flex-direction:column;align-items:center;justify-content:center;gap:1px;z-index:50;padding:0;font-family:inherit}
+.to-top svg{width:22px;height:22px}
+.to-top span{font-size:12px;font-weight:700;letter-spacing:.5px;line-height:1}
+.to-top.show{display:flex}.to-top:hover{background:#e6e9ee}
+</style>
+</head>
+<body>
+<header>
+  <h1>중등 워드마스터 베이직 Day30 (No.731-740)</h1>
+  <span class="badge">단어장 · 한글 뜻 풀이 · 낭독 · 4지선다 · 문장재배열 · 단어 받아쓰기</span>
+</header>
+
+<div class="tts-tune"><b>🔊 내 기기 음성 속도 미세조정</b><button onclick="adjustTtsOffset(-0.05)">－ 더 느리게</button><span id="ttOffsetLabel">기본</span><button onclick="adjustTtsOffset(0.05)">＋ 더 빠르게</button><button class="tt-reset" onclick="resetTtsOffset()">초기화</button></div>
+<button id="toTop" class="to-top" onclick="goTop()" aria-label="맨 위로" title="맨 위로"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M5 11l7-7 7 7"/></svg><span>TOP</span></button>
+<div id="audioNotice" class="audio-notice"></div>
+<div class="tabs">
+  <button class="tab-btn active" onclick="goTab('vocab',this)">① 단어장</button>
+  <button class="tab-btn" onclick="goTab('explain',this)">② 한글 뜻 풀이</button>
+  <button class="tab-btn" onclick="goTab('read',this)">③ 낭독</button>
+  <button class="tab-btn" onclick="goTab('quiz',this)">④ 4지선다</button>
+  <button class="tab-btn" onclick="goTab('reorder',this)">⑤ 문장재배열</button>
+  <button class="tab-btn" onclick="goTab('dict',this)">⑥ 단어 받아쓰기</button>
+</div>
+
+<div id="panel-vocab" class="panel active">
+  <div class="panel-title">① 단어장</div>
+  <div class="panel-desc">🔊를 누르면 영어 단어를 들려줘요. 카드를 눌러 한글 뜻이 나오면 한글 뜻을 읽어 줘요.</div>
+  <div class="vocab-grid" id="vc-core"></div>
+</div>
+
+<div id="panel-explain" class="panel">
+  <div class="panel-title">② 한글 뜻 풀이</div>
+  <div class="panel-desc">한글 뜻이 무슨 말인지 쉬운 말로 풀어 주고, 그 말이 들어간 예문을 보여 줘요. 눈으로 읽으며 뜻을 이해해 보세요.</div>
+  <div class="xp-list" id="ex-list"></div>
+</div>
+
+<div id="panel-read" class="panel">
+  <div class="panel-title">③ 낭독</div>
+  <div class="panel-desc">1-1 번호는 영어 단어와 한글 뜻, 1-2 번호는 예문이에요. 번호를 누르면 그 줄만 들려줘요. 전체 재생은 단어 → 뜻 → 예문 순서로 나와요. 소리를 듣고 따라 말해 보세요. 뜻은 처음에 숨겨져 있고, 줄 오른쪽의 [뜻 보기]를 누르면 그 줄의 뜻이 나와요.</div>
+  <div class="ctrl-bar">
+    <button class="btn btn-play" onclick="playAllRead()">▶ 전체 재생</button>
+    <button class="btn btn-stop" onclick="stopAll()">■ 정지</button>
+    <span class="spd-label">속도</span>
+    <button class="btn-sm spd-read" onclick="setReadSpd(0.9,this)">느리게</button>
+    <button class="btn-sm spd-read sel" onclick="setReadSpd(1.0,this)">보통</button>
+    <button class="btn-sm spd-read" onclick="setReadSpd(1.15,this)">빠르게</button>
+    <button class="btn-ko" id="btn-ko-1" onclick="toggleKo(1)">👁 단어 뜻 모두 보기</button>
+    <button class="btn-ko" id="btn-ko-2" onclick="toggleKo(2)">👁 예문 해석 모두 보기</button>
+  </div>
+  <div class="now-box" id="read-now"><span class="lbl">재생중</span><span class="now-txt">–</span></div>
+  <div class="sent-list" id="read-list"></div>
+</div>
+
+<div id="panel-quiz" class="panel">
+  <div class="panel-title">④ 4지선다</div>
+  <div class="panel-desc">답을 고르면 바로 해설이 나와요.</div>
+  <div class="score-bar">
+    <div class="sc-item">맞은 수 <strong id="mc-ok">0</strong></div>
+    <div class="sc-item">/ <strong id="mc-tot">0</strong>문항</div>
+    <button class="btn-reset" onclick="resetMC()">↺ 다시 풀기</button>
+  </div>
+  <div class="quiz-wrap" id="mc-wrap"></div>
+</div>
+
+<div id="panel-reorder" class="panel">
+  <div class="panel-title">⑤ 문장재배열</div>
+  <div class="ro-desc">조각을 눌러 올바른 순서로 문장을 완성하세요.</div>
+  <div class="score-bar">
+    <div class="sc-item">맞은 수 <strong id="ro-ok">0</strong></div>
+    <div class="sc-item">/ <strong id="ro-tot">0</strong>문항</div>
+    <button class="btn-reset" onclick="resetRO()">↺ 다시 풀기</button>
+  </div>
+  <div class="quiz-wrap" id="ro-wrap"></div>
+</div>
+
+<div id="panel-dict" class="panel">
+  <div class="panel-title">⑥ 단어 받아쓰기</div>
+  <div class="panel-desc">번호를 누르면 영어 단어가 나와요. 노트에 철자를 받아쓴 뒤 선생님이 주신 단어 목록으로 확인하세요.</div>
+  <div class="ctrl-bar">
+    <span class="spd-label">재생 속도</span>
+    <button class="btn-sm sel" id="ds-normal" onclick="setDspd(1.0,'normal')">보통</button>
+    <button class="btn-sm" id="ds-slow" onclick="setDspd(0.85,'slow')">느리게</button>
+  </div>
+  <div class="dict-list" id="dict-list"></div>
+</div>
+
+<script>
+// ═════ 음원 설정 ═════
+const AUDIO_BASE="https://miracleenglish.github.io/voca-audio-middle/audio/";          // 음원 저장소 주소 (확정 후 교체)
+const PREFIX="m1074";                  // m1 + 세트번호 3자리
+const SAMPLE_PREVIEW_TTS=false;              // 샘플 전용: 음원이 없으면 기계음으로 대신 재생 (정식 앱에서는 false)
+function wUrl(i){return AUDIO_BASE+PREFIX+"_w"+i+".mp3";}
+function wkoUrl(i){return AUDIO_BASE+PREFIX+"_w"+i+"_ko.mp3";}
+function sUrl(i){return AUDIO_BASE+PREFIX+"_s"+i+".mp3";}
+
+// ═════ 데이터 ═════
+const SET={"setno": 74, "words": [{"i": 1, "w": "game", "spoken": "game", "groups": [["명", "게임, 경기"]], "kspk": "게임, 경기", "defn": "규칙에 따라 즐기거나 겨루는 놀이를 '게임'이라고 해요. 운동으로 승패를 가르는 것은 '경기'라고 해요.", "kex": "우리 반은 점심시간에 [[게임]]을 했어요.", "en": "Let's play a board game.", "enko": "보드게임을 해요.", "enhl": "Let's play a board <span class=\"hl\">game<\/span>."}, {"i": 2, "w": "enjoy", "spoken": "enjoy", "groups": [["동", "즐기다"]], "kspk": "즐기다", "defn": "어떤 일을 하면서 재미있고 기쁘게 보내는 것을 '즐기다'라고 해요.", "kex": "나는 친구들과 눈썰매를 [[즐겨요]].", "en": "I enjoy reading books.", "enko": "나는 책 읽기를 즐겨요.", "enhl": "I <span class=\"hl\">enjoy<\/span> reading books."}, {"i": 3, "w": "paint", "spoken": "paint", "groups": [["동", "칠하다, 그리다"], ["명", "물감"]], "kspk": "칠하다, 그리다, 물감", "defn": "물감 같은 색을 바르는 것을 '칠하다'라고 해요. 붓이나 연필로 모양을 나타내는 것은 '그리다', 그림에 쓰는 색깔 재료는 '물감'이에요.", "kex": "나는 벽에 노란색을 [[칠했어요]].", "en": "I will paint the wall blue.", "enko": "나는 벽을 파란색으로 칠할 거예요.", "enhl": "I will <span class=\"hl\">paint<\/span> the wall blue."}, {"i": 4, "w": "activity", "spoken": "activity", "groups": [["명", "활동"]], "kspk": "활동", "defn": "몸이나 머리를 움직여서 하는 여러 가지 일을 '활동'이라고 해요.", "kex": "우리 반은 방과 후에 재미있는 [[활동]]을 해요.", "en": "Swimming is a fun activity.", "enko": "수영은 재미있는 활동이에요.", "enhl": "Swimming is a fun <span class=\"hl\">activity<\/span>."}, {"i": 5, "w": "hiking", "spoken": "hiking", "groups": [["명", "하이킹, 도보 여행"]], "kspk": "하이킹, 도보 여행", "defn": "산이나 들길을 걸으며 여행하는 것을 '하이킹' 또는 '도보 여행'이라고 해요.", "kex": "주말에 가족과 함께 [[하이킹]]을 갔어요.", "en": "My family likes hiking in the autumn.", "enko": "우리 가족은 가을에 하이킹하는 것을 좋아해요.", "enhl": "My family likes <span class=\"hl\">hiking<\/span> in the autumn."}, {"i": 6, "w": "fishing", "spoken": "fishing", "groups": [["명", "낚시"]], "kspk": "낚시", "defn": "낚싯대로 물고기를 잡는 것을 '낚시'라고 해요.", "kex": "아빠와 강에서 [[낚시]]를 했어요.", "en": "Grandpa likes fishing by the river.", "enko": "할아버지는 강가에서 낚시하는 것을 좋아하세요.", "enhl": "Grandpa likes <span class=\"hl\">fishing<\/span> by the river."}, {"i": 7, "w": "camping", "spoken": "camping", "groups": [["명", "캠핑, 야영"]], "kspk": "캠핑, 야영", "defn": "집이 아닌 야외에서 텐트를 치고 지내는 것을 '캠핑' 또는 '야영'이라고 해요.", "kex": "여름 방학에 가족과 [[캠핑]]을 갔어요.", "en": "We sleep in a tent when we go camping.", "enko": "캠핑을 가면 우리는 텐트에서 자요.", "enhl": "We sleep in a tent when we go <span class=\"hl\">camping<\/span>."}, {"i": 8, "w": "outdoor", "spoken": "outdoor", "groups": [["형", "옥외[야외]의"]], "kspk": "옥외의, 야외의", "defn": "건물 안이 아니라 바깥에 있는 것을 '야외의'라고 해요.", "kex": "[[야외]] 무대에서 공연을 봤어요.", "en": "Let's have an outdoor lunch.", "enko": "야외에서 점심을 먹어요.", "enhl": "Let's have an <span class=\"hl\">outdoor<\/span> lunch."}, {"i": 9, "w": "interesting", "spoken": "interesting", "groups": [["형", "재미있는, 흥미로운"]], "kspk": "재미있는, 흥미로운", "defn": "하면 즐겁고 더 알고 싶은 마음이 드는 것을 '재미있는' 또는 '흥미로운'이라고 해요.", "kex": "도서관에서 [[재미있는]] 만화책을 빌렸어요.", "en": "That is an interesting idea.", "enko": "그건 재미있는 생각이에요.", "enhl": "That is an <span class=\"hl\">interesting<\/span> idea."}, {"i": 10, "w": "musical", "spoken": "musical", "groups": [["형", "음악의"], ["명", "뮤지컬"]], "kspk": "음악의, 뮤지컬", "defn": "음악과 관련된 것을 '음악의'라고 해요. 노래와 춤, 이야기가 함께 나오는 공연은 '뮤지컬'이라고 해요.", "kex": "[[음악의]] 소리가 교실에 가득했어요.", "en": "She has great musical talent.", "enko": "그녀는 음악적 재능이 아주 뛰어나요.", "enhl": "She has great <span class=\"hl\">musical<\/span> talent."}], "q1": [{"w": "game", "widx": 0, "ans": 1, "opts": [{"t": "보고서", "en": "report"}, {"t": "게임, 경기", "en": "game"}, {"t": "속임수, 장난, 마술", "en": "trick"}, {"t": "홈룸, 담임 학급", "en": "homeroom"}]}, {"w": "enjoy", "widx": 1, "ans": 3, "opts": [{"t": "걸다, 매달다", "en": "hang"}, {"t": "소리 지르다, 외치다", "en": "yell"}, {"t": "회복하다, 되찾다", "en": "recover"}, {"t": "즐기다", "en": "enjoy"}]}, {"w": "paint", "widx": 2, "ans": 0, "opts": [{"t": "칠하다, 그리다", "en": "paint"}, {"t": "(짐 등을) 싸다, 챙기다", "en": "pack"}, {"t": "끝내다, 끝나다", "en": "finish"}, {"t": "밀다", "en": "push"}]}, {"w": "activity", "widx": 3, "ans": 2, "opts": [{"t": "쿠폰, 할인권", "en": "coupon"}, {"t": "여성", "en": "female"}, {"t": "활동", "en": "activity"}, {"t": "원숭이", "en": "monkey"}]}, {"w": "hiking", "widx": 4, "ans": 3, "opts": [{"t": "손가락", "en": "finger"}, {"t": "냅킨", "en": "napkin"}, {"t": "맨 위, 정상", "en": "top"}, {"t": "하이킹, 도보 여행", "en": "hiking"}]}, {"w": "fishing", "widx": 5, "ans": 1, "opts": [{"t": "딸", "en": "daughter"}, {"t": "낚시", "en": "fishing"}, {"t": "사진사, 사진작가", "en": "photographer"}, {"t": "인터뷰, 면접", "en": "interview"}]}, {"w": "camping", "widx": 6, "ans": 1, "opts": [{"t": "뱀", "en": "snake"}, {"t": "캠핑, 야영", "en": "camping"}, {"t": "나뭇가지", "en": "branch"}, {"t": "요리사, 주방장", "en": "chef"}]}, {"w": "outdoor", "widx": 7, "ans": 2, "opts": [{"t": "놀란", "en": "surprised"}, {"t": "완벽한", "en": "perfect"}, {"t": "옥외[야외]의", "en": "outdoor"}, {"t": "평범한, 정상적인", "en": "normal"}]}, {"w": "interesting", "widx": 8, "ans": 0, "opts": [{"t": "재미있는, 흥미로운", "en": "interesting"}, {"t": "틀린, 잘못된", "en": "wrong"}, {"t": "마지막의, 지난", "en": "last"}, {"t": "기쁜, 기쁨을 주는", "en": "joyful"}]}, {"w": "musical", "widx": 9, "ans": 2, "opts": [{"t": "호리호리한, 가냘픈, 날씬한", "en": "slim"}, {"t": "심각한, 진지한", "en": "serious"}, {"t": "음악의", "en": "musical"}, {"t": "몇몇의, 약간의", "en": "some"}]}], "q2": [{"q": "My family likes __________ in the autumn.", "ko": "우리 가족은 가을에 하이킹하는 것을 좋아해요.", "ans": 3, "opts": [{"t": "breeze", "ko": "산들바람, 미풍"}, {"t": "meeting", "ko": "회의"}, {"t": "towel", "ko": "수건, 타월"}, {"t": "hiking", "ko": "하이킹, 도보 여행"}], "meaning": "하이킹, 도보 여행"}, {"q": "She has great __________ talent.", "ko": "그녀는 음악적 재능이 아주 뛰어나요.", "ans": 0, "opts": [{"t": "musical", "ko": "음악의"}, {"t": "tired", "ko": "피곤한, 지친"}, {"t": "online", "ko": "온라인의"}, {"t": "useful", "ko": "유용한"}], "meaning": "음악의"}, {"q": "Grandpa likes __________ by the river.", "ko": "할아버지는 강가에서 낚시하는 것을 좋아하세요.", "ans": 2, "opts": [{"t": "plate", "ko": "접시, 그릇"}, {"t": "adventure", "ko": "모험"}, {"t": "fishing", "ko": "낚시"}, {"t": "people", "ko": "사람들"}], "meaning": "낚시"}, {"q": "I __________ reading books.", "ko": "나는 책 읽기를 즐겨요.", "ans": 1, "opts": [{"t": "open", "ko": "열다"}, {"t": "enjoy", "ko": "즐기다"}, {"t": "listen", "ko": "듣다, 귀 기울이다"}, {"t": "pay", "ko": "지불하다"}], "meaning": "즐기다"}, {"q": "We sleep in a tent when we go __________.", "ko": "캠핑을 가면 우리는 텐트에서 자요.", "ans": 1, "opts": [{"t": "wing", "ko": "날개"}, {"t": "camping", "ko": "캠핑, 야영"}, {"t": "boat", "ko": "보트, 배"}, {"t": "husband", "ko": "남편"}], "meaning": "캠핑, 야영"}, {"q": "Swimming is a fun __________.", "ko": "수영은 재미있는 활동이에요.", "ans": 0, "opts": [{"t": "activity", "ko": "활동"}, {"t": "bookstore", "ko": "서점"}, {"t": "size", "ko": "크기, 치수, 사이즈"}, {"t": "elephant", "ko": "코끼리"}], "meaning": "활동"}, {"q": "Let's play a board __________.", "ko": "보드게임을 해요.", "ans": 3, "opts": [{"t": "silence", "ko": "고요, 침묵"}, {"t": "rule", "ko": "규칙"}, {"t": "truth", "ko": "사실"}, {"t": "game", "ko": "게임, 경기"}], "meaning": "게임, 경기"}, {"q": "That is an __________ idea.", "ko": "그건 재미있는 생각이에요.", "ans": 0, "opts": [{"t": "interesting", "ko": "재미있는, 흥미로운"}, {"t": "absent", "ko": "결석한, (자리에) 없는"}, {"t": "ill", "ko": "아픈, 병든"}, {"t": "afraid", "ko": "무서워하는, 겁내는"}], "meaning": "재미있는, 흥미로운"}, {"q": "Let's have an __________ lunch.", "ko": "야외에서 점심을 먹어요.", "ans": 2, "opts": [{"t": "expensive", "ko": "비싼"}, {"t": "ugly", "ko": "못생긴, 보기 싫은"}, {"t": "outdoor", "ko": "옥외[야외]의"}, {"t": "old", "ko": "늙은, 나이 많은, 오래된"}], "meaning": "옥외[야외]의"}, {"q": "I will __________ the wall blue.", "ko": "나는 벽을 파란색으로 칠할 거예요.", "ans": 1, "opts": [{"t": "stretch", "ko": "늘이다, (팔·다리를) 뻗다"}, {"t": "paint", "ko": "칠하다, 그리다"}, {"t": "cry", "ko": "울다"}, {"t": "send", "ko": "보내다"}], "meaning": "칠하다, 그리다"}], "ro": [{"widx": 0, "pieces": ["Let's play", "a board", "game."], "ko": "보드게임을 해요."}, {"widx": 1, "pieces": ["I", "enjoy", "reading", "books."], "ko": "나는 책 읽기를 즐겨요."}, {"widx": 2, "pieces": ["I", "will paint", "the wall blue."], "ko": "나는 벽을 파란색으로 칠할 거예요."}, {"widx": 3, "pieces": ["Swimming is", "a fun", "activity."], "ko": "수영은 재미있는 활동이에요."}, {"widx": 4, "pieces": ["My family", "likes hiking", "in the autumn."], "ko": "우리 가족은 가을에 하이킹하는 것을 좋아해요."}, {"widx": 5, "pieces": ["Grandpa", "likes fishing", "by the river."], "ko": "할아버지는 강가에서 낚시하는 것을 좋아하세요."}, {"widx": 6, "pieces": ["We sleep", "in a tent", "when we go camping."], "ko": "캠핑을 가면 우리는 텐트에서 자요."}, {"widx": 7, "pieces": ["Let's have", "an outdoor", "lunch."], "ko": "야외에서 점심을 먹어요."}, {"widx": 8, "pieces": ["That is", "an interesting", "idea."], "ko": "그건 재미있는 생각이에요."}, {"widx": 9, "pieces": ["She", "has great", "musical talent."], "ko": "그녀는 음악적 재능이 아주 뛰어나요."}]};
+const WORDS=SET.words;
+
+// ═════ 내 기기 음성 속도 미세조정 ═════
+var ttsOffset=0;try{ttsOffset=parseFloat(localStorage.getItem('wm_ttsOffset'))||0;}catch(e){}
+function updateTtOffsetLabel(){var el=document.getElementById('ttOffsetLabel');if(!el)return;el.textContent=ttsOffset===0?'기본':(ttsOffset>0?'+':'')+ttsOffset.toFixed(2);}
+function adjustTtsOffset(d){ttsOffset=Math.round((ttsOffset+d)*100)/100;if(ttsOffset>0.4)ttsOffset=0.4;if(ttsOffset<-0.4)ttsOffset=-0.4;try{localStorage.setItem('wm_ttsOffset',ttsOffset);}catch(e){}updateTtOffsetLabel();}
+function resetTtsOffset(){ttsOffset=0;try{localStorage.setItem('wm_ttsOffset',0);}catch(e){}updateTtOffsetLabel();}
+function effRate(r){var v=(r||1)+ttsOffset;if(v<0.3)v=0.3;if(v>2.5)v=2.5;return v;}
+updateTtOffsetLabel();
+
+// ═════ 오디오 엔진 (iOS 대응: 하나의 Audio 객체를 계속 사용) ═════
+let sharedAudio=null,curRes=null,runId=0,noticeShown=false;
+function getAudio(){if(!sharedAudio)sharedAudio=new Audio();return sharedAudio;}
+function finishCur(){var r=curRes;curRes=null;if(r)r();}
+function stopAudio(){
+  var a=sharedAudio;
+  if(a){a.onended=null;a.onerror=null;try{a.pause();}catch(e){}}
+  try{if(window.speechSynthesis)speechSynthesis.cancel();}catch(e){}
+  finishCur();
+}
+function showNotice(kind,url){
+  var el=document.getElementById('audioNotice');if(!el)return;
+  if(kind==='tts'){el.innerHTML='🔔 샘플 미리듣기: 음원(mp3)이 아직 없어서 기계음으로 대신 들려드려요. 정식 앱에서는 미리 만든 음원이 나와요.<br><small>불러오지 못한 주소: '+(url||'')+'</small>';}
+  else{el.textContent='🔇 음원을 불러오지 못했어요. 인터넷 연결을 확인하고 다시 눌러 주세요.';}
+  el.style.display='block';
+}
+function speakTTS(fb){
+  return new Promise(function(res){
+    try{
+      if(!window.speechSynthesis||typeof SpeechSynthesisUtterance==='undefined'){res();return;}
+      speechSynthesis.cancel();
+      var u=new SpeechSynthesisUtterance(fb.text);u.lang=fb.lang;u.rate=Math.max(0.3,Math.min(2,(fb.rate||0.85)+ttsOffset));
+      curRes=res;u.onend=function(){if(curRes===res)curRes=null;res();};u.onerror=function(){if(curRes===res)curRes=null;res();};
+      speechSynthesis.speak(u);
+    }catch(e){res();}
+  });
+}
+// url 재생. fb = {text,lang,rate} (샘플 미리듣기용)
+function play(url,rate,fb){
+  return new Promise(function(res){
+    finishCur();curRes=res;
+    var a=getAudio();a.onended=null;a.onerror=null;try{a.pause();}catch(e){}
+    var failed=false;
+    function fail(){
+      if(failed||curRes!==res)return;failed=true;
+      if(SAMPLE_PREVIEW_TTS&&fb){showNotice('tts',url);curRes=null;speakTTS(fb).then(res);}
+      else{showNotice('err',url);curRes=null;res();}
+    }
+    a.onended=function(){if(curRes===res)curRes=null;res();};
+    a.onerror=fail;
+    a.src=url;a.currentTime=0;a.playbackRate=effRate(rate);
+    var p=a.play();if(p&&p.catch)p.catch(fail);
+  });
+}
+function wait(ms){return new Promise(function(r){setTimeout(r,ms);});}
+function fbEn(t){return {text:t,lang:'en-US',rate:0.8};}
+function fbKo(t){return {text:t,lang:'ko-KR',rate:0.9};}
+function playW(i,rate){var w=WORDS[i];return play(wUrl(w.i),rate,fbEn(w.spoken));}
+function playKo(i){var w=WORDS[i];return play(wkoUrl(w.i),1.0,fbKo(w.kspk));}
+function playS(i,rate){var w=WORDS[i];return play(sUrl(w.i),rate,fbEn(w.en));}
+// 재생 권한 확보(iOS): 클릭 직후 첫 음원을 무음으로 한 번 재생
+function primeAudio(url){
+  var a=getAudio();a.muted=true;a.src=url;
+  var p=a.play();
+  if(p&&p.then){p.then(function(){try{a.pause();a.currentTime=0;}catch(e){}a.muted=false;}).catch(function(){a.muted=false;});}else{a.muted=false;}
+}
+function stopAll(){
+  runId++;stopAudio();
+  document.querySelectorAll('.playing').forEach(function(e){e.classList.remove('playing');});
+  var now=document.getElementById('read-now');if(now)now.innerHTML='<span class="lbl">재생중</span><span class="now-txt">–</span>';
+}
+
+// ═════ 탭 ═════
+function goTab(name,btn){
+  stopAll();
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('panel-'+name).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ═════ ① 단어장 ═════
+function posTags(w){return w.groups.map(function(g){return g[0];}).filter(function(x,i,a){return x&&a.indexOf(x)===i;}).map(function(p){return '<span class="tag-pos">'+p+'</span>';}).join('');}
+function buildVocab(){
+  var g=document.getElementById('vc-core');g.innerHTML='';
+  WORDS.forEach(function(w,i){
+    var c=document.createElement('div');c.className='flip-card';
+    var back=w.groups.map(function(x){return (x[0]?'<span class="tag-pos tag-inv">'+x[0]+'</span>':'')+x[1];}).join('<br>');
+    c.innerHTML='<div class="flip-inner"><div class="flip-front"><div class="f-word">'+w.w+'</div><div class="f-pos">'+posTags(w)+'</div><div class="f-snd" data-i="'+i+'">🔊</div></div>'+
+      '<div class="flip-back"><div class="f-mean">'+back+'</div><div class="f-ex">'+w.en+'</div></div></div>';
+    c.onclick=function(){
+      var on=c.classList.toggle('flipped');
+      stopAll();if(on)playKo(i);          // 뜻이 나타나면 한글 뜻을 읽어 줌
+    };
+    c.querySelector('.f-snd').onclick=function(ev){
+      ev.stopPropagation();stopAll();playW(i,1.0);   // 스피커는 영어 단어만
+    };
+    g.appendChild(c);
+  });
+}
+
+// ═════ ② 한글 뜻 풀이 ═════
+function hlKo(t){return t.replace(/\[\[(.*?)\]\]/g,'<mark>$1</mark>');}
+function buildExplain(){
+  var c=document.getElementById('ex-list');c.innerHTML='';
+  WORDS.forEach(function(w){
+    var m=w.groups.map(function(x){return (x[0]?'<span class="tag-pos">'+x[0]+'</span>':'')+x[1];}).join(' &nbsp; ');
+    var d=document.createElement('div');d.className='xp-card';
+    d.innerHTML='<div class="xp-top"><span class="xp-no">'+w.i+'</span><span class="xp-word">'+w.w+'</span></div>'+
+      '<div class="xp-mean">'+m+'</div><div class="xp-def">'+w.defn+'</div>'+
+      '<div class="xp-ex"><span class="xp-lbl">예</span> '+hlKo(w.kex)+'</div>';
+    c.appendChild(d);
+  });
+}
+
+// ═════ ③ 낭독 ═════
+let readRate=1.0;
+function isComplex(s){return /,/.test(s)||/\b(but|when|if|as|because|so that|although)\b/i.test(s)||(s.match(/[.!?]/g)||[]).length>1;}
+function readGap(s){return isComplex(s)?7000:5000;}
+function ids(i,p){return 'read-card-'+i+'-'+p;}
+async function playLine(i,p,rate){
+  if(p===1){await playW(i,rate);if(!alive)return;await wait(350);if(!alive)return;await playKo(i);}
+  else{await playS(i,rate);}
+}
+var alive=true;
+function buildRead(){
+  var c=document.getElementById('read-list');c.innerHTML='';
+  WORDS.forEach(function(w,i){
+    var pair=document.createElement('div');pair.className='read-pair';
+    [1,2].forEach(function(p){
+      var card=document.createElement('div');card.className='sent-card read-card';card.id=ids(i,p);card.classList.add('rd-p'+p);
+      var num=document.createElement('div');num.className='s-num s-num-w';num.id='read-num-'+i+'-'+p;num.textContent=w.i+'-'+p;
+      num.onclick=async function(){
+        stopAll();var my=runId;setRead(i,p,true);setReadNow(i,p,p===1?('🔊 '+w.w+' → 뜻'):('🗣 '+w.en));
+        alive=true;var chk=setInterval(function(){alive=(my===runId);},30);
+        await playLine(i,p,readRate);clearInterval(chk);
+        if(my===runId){setRead(i,p,false);setReadNow(-1);}
+      };
+      var box=document.createElement('div');box.className='read-box';
+      if(p===1){
+        box.innerHTML='<div class="rd-word">'+w.w+'</div><div class="kohide"><span class="rd-mean">'+w.groups.map(function(x){return x[1];}).join(', ')+'</span></div>';
+      }else{
+        box.innerHTML='<div class="rd-sent">'+w.enhl+'</div><div class="kohide"><div class="rd-ko">'+w.enko+'</div></div>';
+      }
+      var kb=document.createElement('button');kb.className='btn-ko-row';kb.textContent='뜻 보기';
+      kb.onclick=function(){var on=card.classList.toggle('ko-on');kb.textContent=on?'뜻 숨기기':'뜻 보기';syncKoBtn();};
+      card.appendChild(num);card.appendChild(box);card.appendChild(kb);pair.appendChild(card);
+    });
+    c.appendChild(pair);
+  });
+}
+function setRead(i,p,on){
+  var card=document.getElementById(ids(i,p)),num=document.getElementById('read-num-'+i+'-'+p);
+  if(!card)return;card.classList.toggle('playing',on);num.classList.toggle('playing',on);
+}
+function setReadNow(i,p,step){
+  var el=document.getElementById('read-now');if(!el)return;
+  if(i<0){el.innerHTML='<span class="lbl">재생중</span><span class="now-txt">–</span>';return;}
+  el.innerHTML='<span class="lbl">'+WORDS[i].i+'-'+p+'</span><span class="now-txt">'+step+'</span>';
+}
+// 전체 재생: 단어 → (짧은 간격) → 한글 뜻 → (따라 말하기) → 예문 → (따라 읽기) → 다음
+async function playAllRead(){
+  stopAll();
+  primeAudio(wUrl(WORDS[0].i));
+  await wait(150);var my=++runId;
+  for(var i=0;i<WORDS.length;i++){
+    if(my!==runId)return;
+    var w=WORDS[i];
+    setRead(i,1,true);setReadNow(i,1,'🔊 '+w.w+' → 뜻');
+    await playW(i,readRate);if(my!==runId)return;
+    await wait(350);if(my!==runId)return;
+    await playKo(i);if(my!==runId)return;
+    await wait(1500);if(my!==runId)return;           // 단어 따라 말하기
+    setRead(i,1,false);setRead(i,2,true);setReadNow(i,2,'🗣 따라 읽어요: '+w.en);
+    await playS(i,readRate);if(my!==runId)return;
+    await wait(readGap(w.en));if(my!==runId)return;  // 문장 따라 읽기
+    setRead(i,2,false);await wait(500);
+  }
+  setReadNow(-1);
+}
+function setReadSpd(r,btn){readRate=r;document.querySelectorAll('.spd-read').forEach(function(b){b.classList.remove('sel');});btn.classList.add('sel');}
+var KO_LBL={1:['단어 뜻','btn-ko-1'],2:['예문 해석','btn-ko-2']};
+function syncKoBtn(){
+  [1,2].forEach(function(p){
+    var cards=document.querySelectorAll('.read-card.rd-p'+p),on=document.querySelectorAll('.read-card.rd-p'+p+'.ko-on');
+    var b=document.getElementById(KO_LBL[p][1]);
+    if(b)b.textContent=(cards.length&&on.length===cards.length)?('🙈 '+KO_LBL[p][0]+' 모두 숨기기'):('👁 '+KO_LBL[p][0]+' 모두 보기');
+  });
+}
+function toggleKo(p){
+  var cards=document.querySelectorAll('.read-card.rd-p'+p);
+  var allOn=document.querySelectorAll('.read-card.rd-p'+p+'.ko-on').length===cards.length;
+  cards.forEach(function(c){c.classList.toggle('ko-on',!allOn);var k=c.querySelector('.btn-ko-row');if(k)k.textContent=allOn?'뜻 보기':'뜻 숨기기';});
+  syncKoBtn();
+}
+
+// ═════ ④ 4지선다 ═════
+let mcOk=0;
+const NUMS=['①','②','③','④'];
+function buildMC(){
+  var c=document.getElementById('mc-wrap');c.innerHTML='';mcOk=0;document.getElementById('mc-ok').textContent=0;
+  var total=SET.q1.length+SET.q2.length;document.getElementById('mc-tot').textContent=total;
+  var n=0;
+  function head(t,d){var h=document.createElement('div');h.className='step-head';h.innerHTML='<b>'+t+'</b><span>'+d+'</span>';c.appendChild(h);}
+  head('1단계 · 단어 뜻 찾기','영어 단어의 한글 뜻을 골라요 (1~'+SET.q1.length+'번)');
+  SET.q1.forEach(function(q){
+    n++;var num=n;
+    var card=document.createElement('div');card.className='q-card';
+    card.innerHTML='<div class="q-num">['+num+'번]</div><div class="q-text">다음 단어의 뜻은? &nbsp; <b class="q-en">'+q.w+'</b> <span class="mini-snd">🔊</span></div>';
+    card.querySelector('.mini-snd').onclick=function(){stopAll();playW(q.widx,1.0);};
+    var correct=q.opts[q.ans].t;
+    var others=q.opts.map(function(o,i){return i===q.ans?null:(NUMS[i]+' '+o.t+' ('+o.en+')');}).filter(Boolean).join(' &nbsp; ');
+    addOptions(card,q.opts.map(function(o){return o.t;}),q.ans,'<b>'+q.w+'</b> = '+correct+'<br><span class="exp-sub">다른 보기는 다른 단어의 뜻이에요: '+others+'</span>');
+    c.appendChild(card);
+  });
+  head('2단계 · 빈칸 채우기','한글 해석을 보고 빈칸에 알맞은 단어를 골라요 ('+(SET.q1.length+1)+'~'+total+'번)');
+  SET.q2.forEach(function(q){
+    n++;var num=n;
+    var card=document.createElement('div');card.className='q-card';
+    card.innerHTML='<div class="q-num">['+num+'번]</div><div class="q-text">'+q.q.replace('__________','<span class="blank-span"></span>')+'</div><div class="q-ko">'+q.ko+'</div>';
+    var others=q.opts.map(function(o,i){return i===q.ans?null:(NUMS[i]+' '+o.t+' ('+o.ko+')');}).filter(Boolean).join(' &nbsp; ');
+    addOptions(card,q.opts.map(function(o){return o.t;}),q.ans,'정답은 <b>'+q.opts[q.ans].t+'</b> ('+q.meaning+')예요. 한글 해석에서 같은 뜻을 찾아보세요.<br><span class="exp-sub">다른 보기: '+others+'</span>');
+    c.appendChild(card);
+  });
+}
+function addOptions(card,texts,ans,expHtml){
+  var opts=document.createElement('div');opts.className='opts';
+  texts.forEach(function(t,oi){
+    var b=document.createElement('button');b.className='opt';b.innerHTML=NUMS[oi]+' '+t;
+    b.onclick=function(){
+      if(b.disabled)return;
+      opts.querySelectorAll('.opt').forEach(function(x){x.disabled=true;});
+      if(oi===ans){b.classList.add('ok');mcOk++;document.getElementById('mc-ok').textContent=mcOk;}
+      else{b.classList.add('ng');opts.querySelectorAll('.opt')[ans].classList.add('ok');}
+      card.querySelector('.exp').classList.add('show');
+    };
+    opts.appendChild(b);
+  });
+  card.appendChild(opts);
+  var e=document.createElement('div');e.className='exp';e.innerHTML='<div class="exp-lbl">해설</div>'+expHtml;card.appendChild(e);
+}
+function resetMC(){buildMC();}
+
+// ═════ ⑤ 문장재배열 ═════
+let roOk=0,roAns=[];
+function shuffleIdx(n){
+  var a=[];for(var i=0;i<n;i++)a.push(i);
+  for(var t=0;t<50;t++){
+    for(var i=n-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var x=a[i];a[i]=a[j];a[j]=x;}
+    var same=a.every(function(v,k){return v===k;});
+    if(!same||n<2)break;
+  }
+  return a;
+}
+function buildRO(){
+  var c=document.getElementById('ro-wrap');c.innerHTML='';roOk=0;document.getElementById('ro-ok').textContent=0;
+  document.getElementById('ro-tot').textContent=SET.ro.length;
+  roAns=SET.ro.map(function(){return [];});
+  SET.ro.forEach(function(item,si){
+    var card=document.createElement('div');card.className='q-card';
+    var qt=document.createElement('div');qt.className='ro-q';
+    qt.innerHTML='<span style="color:#c05010;font-weight:700;">['+(si+1)+'번]</span> 조각을 올바른 순서로 눌러요.<br><span class="ro-ko">💬 '+item.ko+'</span>';
+    card.appendChild(qt);
+    var ca=document.createElement('div');ca.className='chip-area';
+    var aa=document.createElement('div');aa.className='ans-area';
+    var rs=document.createElement('div');rs.className='ro-result';
+    shuffleIdx(item.pieces.length).forEach(function(pi){
+      var ch=document.createElement('div');ch.className='chip';ch.textContent=item.pieces[pi];ch.dataset.pi=pi;
+      ch.onclick=function(){
+        if(ch.classList.contains('used'))return;
+        ch.classList.add('used');roAns[si].push({pi:pi,el:ch});renderRO(si,aa,rs,item);
+      };
+      ca.appendChild(ch);
+    });
+    card.appendChild(ca);card.appendChild(aa);card.appendChild(rs);
+    var rb=document.createElement('button');rb.className='btn-sm';rb.style.marginTop='8px';rb.textContent='↺ 초기화';
+    rb.onclick=function(){roAns[si]=[];ca.querySelectorAll('.chip').forEach(function(x){x.classList.remove('used');});aa.innerHTML='';rs.textContent='';rs.className='ro-result';};
+    card.appendChild(rb);c.appendChild(card);
+  });
+}
+function renderRO(si,aa,rs,item){
+  aa.innerHTML='';
+  roAns[si].forEach(function(it,idx){
+    var ac=document.createElement('div');ac.className='ans-chip';ac.textContent=item.pieces[it.pi];
+    ac.onclick=function(){it.el.classList.remove('used');roAns[si].splice(idx,1);renderRO(si,aa,rs,item);};
+    aa.appendChild(ac);
+  });
+  if(roAns[si].length===item.pieces.length){
+    var ok=roAns[si].every(function(it,k){return it.pi===k;});
+    if(ok){rs.textContent='✓ 정답입니다!';rs.className='ro-result ok';roOk++;document.getElementById('ro-ok').textContent=roOk;}
+    else{rs.innerHTML='✗ 다시 확인해 보세요.<br><span style="color:#5070a0;font-size:12px;">정답: '+item.pieces.join(' ')+'</span>';rs.className='ro-result ng';}
+  }else{rs.textContent='';rs.className='ro-result';}
+}
+function resetRO(){buildRO();}
+
+// ═════ ⑥ 단어 받아쓰기 ═════
+let dRate=1.0;
+function buildDict(){
+  var c=document.getElementById('dict-list');c.innerHTML='';
+  WORDS.forEach(function(w,i){
+    var card=document.createElement('div');card.className='dict-card';
+    var num=document.createElement('div');num.className='d-num';num.textContent=w.i;
+    num.onclick=function(){
+      stopAll();document.querySelectorAll('.d-num').forEach(function(n){n.classList.remove('pd');});
+      num.classList.add('pd');var my=runId;
+      playW(i,dRate).then(function(){num.classList.remove('pd');});
+    };
+    var hint=document.createElement('div');hint.className='d-hint';hint.textContent='단어 '+w.i+' — 번호를 눌러 들으세요';
+    card.appendChild(num);card.appendChild(hint);c.appendChild(card);
+  });
+}
+function setDspd(r,key){dRate=r;['normal','slow'].forEach(function(k){document.getElementById('ds-'+k).classList.remove('sel');});document.getElementById('ds-'+key).classList.add('sel');}
+
+// ═════ 맨 위로 버튼 ═════
+function goTop(){try{window.scrollTo({top:0,behavior:'smooth'});}catch(e){window.scrollTo(0,0);}}
+window.addEventListener('scroll',function(){
+  var b=document.getElementById('toTop');if(!b)return;
+  var y=window.pageYOffset||document.documentElement.scrollTop||0;
+  b.classList.toggle('show',y>300);
+});
+
+// ═════ 초기 실행 ═════
+buildVocab();buildExplain();buildRead();buildMC();buildRO();buildDict();
+
+</script>
+</body>
+</html>
