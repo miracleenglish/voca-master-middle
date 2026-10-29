@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><script>(function(){var ua=navigator.userAgent||'';if(/KAKAOTALK/i.test(ua)){location.href='kakaotalk://web/openExternal?url='+encodeURIComponent(location.href);return;}if(/NAVER|Instagram|FBAN|FBAV|Line\//i.test(ua)){window.addEventListener('DOMContentLoaded',function(){var b=document.createElement('div');b.style.cssText='position:fixed;top:0;left:0;right:0;background:#fff3cd;color:#7a5900;padding:10px 14px;font-size:13px;text-align:center;z-index:99999;border-bottom:2px solid #e8b93b;font-family:sans-serif;';b.innerHTML='🔊 이 앱 안에서는 소리가 안 나올 수 있어요. 우측 상단 메뉴에서 <b>다른 브라우저로 열기</b>를 눌러주세요.';document.body.insertBefore(b,document.body.firstChild);});}})();</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>학습_10. 중등 워드마스터 실력 Day4 (No.91-100)</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI','Apple SD Gothic Neo',sans-serif;background:#f0f4f8;color:#2d3a4a;min-height:100vh}
+
+/* 헤더 */
+header{background:#fff;padding:14px 24px;border-bottom:2px solid #d0dcea;display:flex;align-items:center;gap:14px;flex-wrap:wrap;box-shadow:0 2px 6px rgba(0,0,0,.07)}
+header h1{font-size:15px;color:#2a6db5;font-weight:700}
+.badge{background:#e8f0fb;color:#5080b0;font-size:12px;padding:3px 10px;border-radius:20px}
+
+/* 탭 */
+.tabs{display:flex;background:#fff;padding:0 10px;gap:2px;border-bottom:2px solid #d0dcea;overflow-x:auto;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.tab-btn{padding:10px 13px;font-size:13px;font-weight:600;color:#8090a8;border:none;background:none;cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;transition:all .2s}
+.tab-btn:hover{color:#4070b0}
+.tab-btn.active{color:#2a6db5;border-bottom-color:#2a6db5}
+
+/* 패널 */
+.panel{display:none;padding:20px 18px;max-width:820px;margin:0 auto}
+.panel.active{display:block}
+.panel-title{font-size:17px;font-weight:700;color:#2a6db5;margin-bottom:5px}
+.panel-desc{font-size:13px;color:#8090a8;margin-bottom:16px;line-height:1.6}
+
+/* 지문 박스 */
+.passage-box{background:#fff;border:1px solid #d0dcea;border-radius:12px;padding:22px;margin-bottom:16px;line-height:2.1;font-size:16px;color:#2d3a4a;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.p-title{font-size:13px;color:#8090a8;margin-bottom:10px;font-style:italic;font-weight:600}
+.hl{color:#c05010;font-weight:700}
+
+/* 버튼 */
+.ctrl-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.btn{padding:9px 18px;border-radius:8px;border:none;font-size:14px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-play{background:#2a6db5;color:#fff}.btn-play:hover{background:#3580cc}
+.btn-stop{background:#c0392b;color:#fff}.btn-stop:hover{background:#e74c3c}
+.btn-sm{background:#fff;color:#4070b0;border:1px solid #b0c8e8;padding:7px 13px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all .15s}
+.btn-sm:hover{background:#e8f0fb}
+.btn-sm.sel{background:#dceeff;border-color:#2a6db5;color:#2a6db5}
+.spd-label{font-size:12px;color:#8090a8}
+
+/* 현재 문장 */
+.now-box{background:#e8f4ff;border:1px solid #b0d0f0;border-radius:10px;padding:13px 18px;margin-bottom:13px;font-size:16px;color:#1a3a60;line-height:1.7;min-height:52px;display:flex;align-items:center}.now-box .now-txt{flex:1}
+.now-box .lbl{color:#5090c0;font-size:12px;font-weight:700;margin-right:8px}
+
+/* 문장 카드 */
+.sent-list{display:flex;flex-direction:column;gap:8px}
+.sent-card{background:#fff;border:1px solid #d0dcea;border-radius:10px;padding:11px 15px;display:flex;align-items:center;gap:11px;box-shadow:0 1px 3px rgba(0,0,0,.04);transition:border-color .2s}
+.sent-card.playing{border-color:#2a6db5;background:#f0f7ff}
+.s-num{min-width:27px;height:27px;border-radius:50%;background:#e0ecf8;color:#2a6db5;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background .15s}
+.s-num:hover{background:#c0dcf0}
+.s-num.playing{background:#2a6db5;color:#fff}
+.s-txt{font-size:15px;color:#2d3a4a;line-height:1.6;flex:1}
+
+/* 따라말하기 */
+.shadow-box{background:#fff;border:1px solid #d0dcea;border-radius:14px;padding:44px 24px;text-align:center;margin-bottom:16px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.shadow-box .mic{font-size:52px;margin-bottom:14px}
+.sh-status{font-size:17px;color:#3060a0;font-weight:700}
+.sh-hint{font-size:13px;color:#a0b0c0;margin-top:8px}
+.prog-row{display:flex;justify-content:center;gap:8px;margin-top:20px;flex-wrap:wrap}
+.prog-dot{width:12px;height:12px;border-radius:50%;background:#d0dcea;transition:background .3s}
+.prog-dot.done{background:#2a6db5}
+.prog-dot.cur{background:#e07030;transform:scale(1.3)}
+
+/* 단어장 */
+.vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;margin-bottom:18px}
+.flip-card{height:120px;perspective:800px;cursor:pointer}
+.flip-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .4s}
+.flip-card.flipped .flip-inner{transform:rotateY(180deg)}
+.flip-front,.flip-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:13px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+.flip-front{background:#fff;border:2px solid #d0dcea}
+.flip-back{background:#2a6db5;color:#fff;transform:rotateY(180deg)}
+.f-word{font-size:18px;font-weight:700;color:#1a3a60}
+.f-pos{font-size:11px;color:#8090a8;margin-top:3px}
+.f-snd{font-size:17px;margin-top:6px;color:#2a6db5}
+.f-mean{font-size:14px;font-weight:600}
+.f-ex{font-size:11px;margin-top:5px;color:#cce0ff;line-height:1.4}
+.sec-title{font-size:13px;font-weight:700;color:#5080a0;margin:14px 0 8px;padding-bottom:4px;border-bottom:1px solid #d0dcea}
+
+/* 숙어 카드 */
+.idiom-list{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
+.idiom-card{background:#fff;border:1px solid #d0dcea;border-radius:10px;padding:13px 16px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.idiom-phrase{font-size:15px;font-weight:700;color:#2a6db5}
+.idiom-mean{font-size:14px;color:#3a4a60;margin-top:3px}
+.idiom-ex{font-size:13px;color:#8090a8;font-style:italic;margin-top:4px}
+
+/* 받아쓰기 */
+.dict-list{display:flex;flex-direction:column;gap:10px}
+.dict-card{background:#fff;border:1px solid #d0dcea;border-radius:10px;padding:13px 15px;display:flex;align-items:center;gap:12px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.d-num{min-width:34px;height:34px;border-radius:50%;background:#e0ecf8;color:#2a6db5;font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;transition:background .15s}
+.d-num:hover{background:#c0dcf0}
+.d-num.pd{background:#2a6db5;color:#fff}
+.d-hint{font-size:13px;color:#a0b0c0;font-style:italic}
+
+/* 퀴즈 */
+.quiz-wrap{display:flex;flex-direction:column;gap:16px}
+.q-card{background:#fff;border:1px solid #d0dcea;border-radius:12px;padding:18px;box-shadow:0 1px 4px rgba(0,0,0,.05)}
+.q-num{font-size:13px;font-weight:700;color:#5080a0;margin-bottom:6px}
+.q-text{font-size:15px;color:#2d3a4a;line-height:1.6;margin-bottom:4px}
+.q-ko{font-size:13px;color:#3a4a6a;font-style:italic;font-weight:500;margin-bottom:12px}
+.blank-span{display:inline-block;width:110px;height:1.2em;border-bottom:2.5px solid #2a6db5;vertical-align:middle;margin:0 4px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.opt{background:#f4f8fc;border:1px solid #d0dcea;border-radius:8px;padding:9px 12px;font-size:14px;color:#2d3a4a;cursor:pointer;text-align:left;transition:all .15s}
+.opt:hover{background:#e0f0ff;border-color:#90b8e0}
+.opt.ok{background:#e8f8ee;border-color:#4caf50;color:#1a6030;font-weight:700}
+.opt.ng{background:#fdecea;border-color:#e74c3c;color:#8a1a1a}
+.opt:disabled{cursor:default}
+.exp{display:none;margin-top:11px;background:#f8fafc;border-left:3px solid #2a6db5;border-radius:0 8px 8px 0;padding:10px 14px;font-size:13px;color:#3a4a60;line-height:1.7}
+.exp.show{display:block}
+.exp-lbl{color:#5060a0;font-style:italic;margin-bottom:3px;font-weight:600}
+
+/* 재배열 */
+.ro-desc{font-size:15px;font-weight:700;color:#2d3a4a;margin-bottom:16px;line-height:1.6}.ro-q{font-size:13px;color:#3a4a60;font-weight:700;margin-bottom:9px}
+.chip-area{display:flex;flex-wrap:wrap;gap:7px;padding:9px;border:1px dashed #b0c8e0;border-radius:8px;min-height:44px;background:#fafcff;margin-bottom:9px}
+.chip{background:#e0ecf8;color:#1a3a60;padding:6px 13px;border-radius:20px;font-size:14px;cursor:pointer;transition:all .15s;user-select:none;font-weight:500}
+.chip:hover{background:#c0d8f0}
+.chip.used{opacity:.3;cursor:default}
+.ans-area{min-height:40px;padding:8px 12px;border:1px solid #c0d8ea;border-radius:8px;margin-bottom:9px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:#fff}
+.ans-chip{background:#2a6db5;color:#fff;padding:5px 12px;border-radius:20px;font-size:14px;cursor:pointer;font-weight:500}
+.ans-chip:hover{background:#1a5090}
+.ro-result{font-size:13px;font-weight:700;min-height:20px;margin-top:4px}
+.ro-result.ok{color:#27a060}
+.ro-result.ng{color:#c0392b}
+
+/* 점수 바 */
+.score-bar{background:#fff;border-radius:10px;padding:12px 18px;display:flex;align-items:center;gap:14px;margin-bottom:16px;flex-wrap:wrap;border:1px solid #d0dcea;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.sc-item{font-size:14px;color:#6080a0}
+.sc-item strong{color:#c05010;font-size:18px}
+.btn-reset{margin-left:auto;background:#e8f0fb;color:#4070b0;border:none;padding:7px 14px;border-radius:8px;font-size:13px;cursor:pointer}
+.btn-reset:hover{background:#d0e4f8}
+
+@media(max-width:560px){
+  .opts{grid-template-columns:1fr}
+  .vocab-grid{grid-template-columns:repeat(2,1fr)}
+  .panel{padding:13px 11px}
+}
+.tts-tune{display:flex;align-items:center;gap:8px;background:#fff8e6;border:1px solid #f0d998;border-radius:10px;padding:8px 12px;margin:10px 0;font-size:13px;color:#7a5c00;flex-wrap:wrap}.tts-tune b{color:#5a4400}.tts-tune button{background:#ffe9a8;border:none;color:#5a4400;padding:5px 10px;border-radius:7px;font-size:13px;cursor:pointer;font-weight:600}.tts-tune button:hover{background:#ffdd80}.tts-tune .tt-reset{background:#f0e0b0;color:#7a5c00;font-weight:400}
+.tag-pos{display:inline-block;background:#e8f0fb;color:#2a6db5;border-radius:6px;padding:1px 7px;font-size:11px;font-weight:700;margin-right:4px}
+.tag-inv{background:rgba(255,255,255,.22);color:#fff}
+.f-mean{line-height:1.7}
+.audio-notice{display:none;background:#fff8e6;border:1px solid #f0d998;color:#7a5c00;border-radius:10px;padding:9px 14px;margin:10px auto 0;max-width:820px;font-size:12.5px;line-height:1.5}
+/* 한글 뜻 풀이 */
+.xp-list{display:flex;flex-direction:column;gap:12px}
+.xp-card{background:#fff;border:1px solid #d0dcea;border-radius:12px;padding:15px 17px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.xp-top{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.xp-no{min-width:26px;height:26px;border-radius:50%;background:#e0ecf8;color:#2a6db5;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.xp-word{font-size:19px;font-weight:800;color:#1a3a60}
+.xp-mean{font-size:15px;font-weight:700;color:#c05010;margin-bottom:8px}
+.xp-def{font-size:14.5px;color:#2d3a4a;line-height:1.8;background:#f4f8fc;border-radius:8px;padding:9px 12px;margin-bottom:8px}
+.xp-ex{font-size:14px;color:#3a4a60;line-height:1.7}
+.xp-lbl{display:inline-block;background:#2a6db5;color:#fff;border-radius:6px;font-size:11px;font-weight:700;padding:1px 7px;margin-right:4px}
+.xp-ex mark{background:#fff0b8;color:#7a3a00;font-weight:700;padding:0 2px;border-radius:3px}
+/* 낭독 */
+.read-card{align-items:flex-start}
+.read-box{flex:1}
+.rd-word{font-size:17px;font-weight:800;color:#1a3a60}
+.rd-sent{font-size:15px;color:#2d3a4a;line-height:1.6;margin-top:2px}
+.rd-mean{display:inline-block;font-size:14px;font-weight:700;color:#c05010;margin-top:5px}
+.rd-ko{font-size:13px;color:#5a6a85;margin-top:2px}
+.kohide{display:none}.read-card.ko-on .kohide{display:block}
+.btn-ko-row{margin-left:auto;flex-shrink:0;background:#fff;border:1.5px solid #c05010;color:#c05010;padding:5px 10px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;white-space:nowrap}
+.btn-ko-row:hover{background:#fff2e8}
+.read-pair{display:flex;flex-direction:column;gap:5px;margin-bottom:9px}
+.s-num-w{min-width:42px;border-radius:14px;padding:0 6px}
+.tts-tune{margin:10px auto 0;max-width:820px}
+.btn-ko{background:#fff;border:1.5px solid #c05010;color:#c05010;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer}
+.btn-ko:hover{background:#fff2e8}
+/* 4지선다 */
+.step-head{display:flex;flex-direction:column;gap:2px;background:#eef4ff;border-left:4px solid #2a6db5;border-radius:0 8px 8px 0;padding:9px 13px;margin-top:6px}
+.step-head b{font-size:15px;color:#1a3a60}.step-head span{font-size:12.5px;color:#5a6a85}
+.q-en{font-size:18px;color:#1a3a60}
+.mini-snd{cursor:pointer;margin-left:2px}
+.exp-sub{color:#6a7a95;font-size:12.5px}
+.ro-ko{font-size:13px;color:#2a6db5;font-weight:600}
+.d-num.pd{background:#2a6db5;color:#fff}
+header{padding:12px 18px}
+.dict-re{margin-left:auto;font-size:14px;font-weight:700;padding:10px 14px;background:#3a4a8f;color:#fff;border:0;border-radius:10px}.ctrl-bar{flex-wrap:wrap}.btn-sm.dict-re:hover,.btn-sm.dict-re:focus,.btn-sm.dict-re:active{background:#ff6fa5;color:#fff;border:0;outline:none}.btn-sm.dict-re:active{transform:scale(.97)}.dict-foot{margin-top:16px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}.dict-ans{width:100%;box-sizing:border-box;background:#f4f7fc;border:1px solid #d5deee;border-radius:10px;padding:8px 12px;font-size:13px;line-height:1.9;color:#2d3a4a}.da-n{display:inline-block;min-width:22px;color:#c05010;font-weight:700}.da-ko{color:#5070a0}
+.to-top{position:fixed;right:16px;bottom:20px;width:60px;height:64px;border-radius:14px;border:2px solid #fff;background:#3a4a8f;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(35,41,70,.45);display:none;flex-direction:column;align-items:center;justify-content:center;gap:2px;z-index:50;padding:0;font-family:inherit}
+.to-top svg{width:26px;height:26px}
+.to-top span{font-size:13px;font-weight:800;letter-spacing:.5px;line-height:1}
+.to-top.show{display:flex}.to-top:hover{background:#ff6fa5;transform:translateY(-2px)}
+</style>
+</head>
+<body>
+<header>
+  <h1>중등 워드마스터 실력 Day4 (No.91-100)</h1>
+  <span class="badge">단어장 · 한글 뜻 풀이 · 낭독 · 4지선다 · 문장재배열 · 단어 받아쓰기</span>
+</header>
+
+<div class="tts-tune"><b>🔊 내 기기 음성 속도 미세조정</b><button onclick="adjustTtsOffset(-0.05)">－ 더 느리게</button><span id="ttOffsetLabel">기본</span><button onclick="adjustTtsOffset(0.05)">＋ 더 빠르게</button><button class="tt-reset" onclick="resetTtsOffset()">초기화</button></div>
+<button id="toTop" class="to-top" onclick="goTop()" aria-label="맨 위로" title="맨 위로"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M5 11l7-7 7 7"/></svg><span>TOP</span></button>
+<div id="audioNotice" class="audio-notice"></div>
+<div class="tabs">
+  <button class="tab-btn active" onclick="goTab('vocab',this)">① 단어장</button>
+  <button class="tab-btn" onclick="goTab('explain',this)">② 한글 뜻 풀이</button>
+  <button class="tab-btn" onclick="goTab('read',this)">③ 낭독</button>
+  <button class="tab-btn" onclick="goTab('quiz',this)">④ 4지선다</button>
+  <button class="tab-btn" onclick="goTab('reorder',this)">⑤ 문장재배열</button>
+  <button class="tab-btn" onclick="goTab('dict',this)">⑥ 단어 받아쓰기</button>
+</div>
+
+<div id="panel-vocab" class="panel active">
+  <div class="panel-title">① 단어장</div>
+  <div class="panel-desc">🔊를 누르면 영어 단어를 들려줘요. 카드를 눌러 한글 뜻이 나오면 한글 뜻을 읽어 줘요.</div>
+  <div class="vocab-grid" id="vc-core"></div>
+</div>
+
+<div id="panel-explain" class="panel">
+  <div class="panel-title">② 한글 뜻 풀이</div>
+  <div class="panel-desc">한글 뜻이 무슨 말인지 쉬운 말로 풀어 주고, 그 말이 들어간 예문을 보여 줘요. 눈으로 읽으며 뜻을 이해해 보세요.</div>
+  <div class="xp-list" id="ex-list"></div>
+</div>
+
+<div id="panel-read" class="panel">
+  <div class="panel-title">③ 낭독</div>
+  <div class="panel-desc">1-1 번호는 영어 단어와 한글 뜻, 1-2 번호는 예문이에요. 번호를 누르면 그 줄만 들려줘요. 전체 재생은 단어 → 뜻 → 예문 순서로 나와요. 소리를 듣고 따라 말해 보세요. 뜻은 처음에 숨겨져 있고, 줄 오른쪽의 [뜻 보기]를 누르면 그 줄의 뜻이 나와요.</div>
+  <div class="ctrl-bar">
+    <button class="btn btn-play" onclick="playAllRead()">▶ 전체 재생</button>
+    <button class="btn btn-stop" onclick="stopAll()">■ 정지</button>
+    <span class="spd-label">속도</span>
+    <button class="btn-sm spd-read" onclick="setReadSpd(0.9,this)">느리게</button>
+    <button class="btn-sm spd-read sel" onclick="setReadSpd(1.0,this)">보통</button>
+    <button class="btn-sm spd-read" onclick="setReadSpd(1.15,this)">빠르게</button>
+    <button class="btn-ko" id="btn-ko-1" onclick="toggleKo(1)">👁 단어 뜻 모두 보기</button>
+    <button class="btn-ko" id="btn-ko-2" onclick="toggleKo(2)">👁 예문 해석 모두 보기</button>
+  </div>
+  <div class="now-box" id="read-now"><span class="lbl">재생중</span><span class="now-txt">–</span></div>
+  <div class="sent-list" id="read-list"></div>
+</div>
+
+<div id="panel-quiz" class="panel">
+  <div class="panel-title">④ 4지선다</div>
+  <div class="panel-desc">답을 고르면 바로 해설이 나와요.</div>
+  <div class="score-bar">
+    <div class="sc-item">맞은 수 <strong id="mc-ok">0</strong></div>
+    <div class="sc-item">/ <strong id="mc-tot">0</strong>문항</div>
+    <button class="btn-reset" onclick="resetMC()">↺ 다시 풀기</button>
+  </div>
+  <div class="quiz-wrap" id="mc-wrap"></div>
+</div>
+
+<div id="panel-reorder" class="panel">
+  <div class="panel-title">⑤ 문장재배열</div>
+  <div class="ro-desc">조각을 눌러 올바른 순서로 문장을 완성하세요.</div>
+  <div class="score-bar">
+    <div class="sc-item">맞은 수 <strong id="ro-ok">0</strong></div>
+    <div class="sc-item">/ <strong id="ro-tot">0</strong>문항</div>
+    <button class="btn-reset" onclick="resetRO()">↺ 다시 풀기</button>
+  </div>
+  <div class="quiz-wrap" id="ro-wrap"></div>
+</div>
+
+<div id="panel-dict" class="panel">
+  <div class="panel-title">⑥ 단어 받아쓰기</div>
+  <div class="panel-desc">번호를 누르면 영어 단어가 나와요. 노트에 철자를 받아쓰고, 다 쓴 뒤 맨 아래에서 정답을 확인하세요. 한 번 끝나면 순서를 바꿔서 다시 해 볼 수 있어요.</div>
+  <div class="ctrl-bar">
+    <span class="spd-label">재생 속도</span>
+    <button class="btn-sm sel" id="ds-normal" onclick="setDspd(1.0,'normal')">보통</button>
+    <button class="btn-sm" id="ds-slow" onclick="setDspd(0.85,'slow')">느리게</button>
+    <button class="btn-sm dict-re" id="dict-re-btn" onclick="reshuffleDict()">🔀 순서 바꿔서 다시 받아쓰기</button>
+  </div>
+  <div class="dict-list" id="dict-list"></div>
+  <div class="dict-foot">
+    <button class="btn-sm" id="dict-ans-btn" onclick="toggleDictAns()">✅ 받아쓰기 정답 확인하기</button>
+    <div class="dict-ans" id="dict-ans" style="display:none"></div>
+  </div>
+</div>
+
+<script>
+// ═════ 음원 설정 ═════
+const AUDIO_BASE="https://miracleenglish.github.io/voca-audio-middle/audio/";          // 음원 저장소 주소 (확정 후 교체)
+const PREFIX="m2010";                  // m1 + 세트번호 3자리
+const SAMPLE_PREVIEW_TTS=false;              // 샘플 전용: 음원이 없으면 기계음으로 대신 재생 (정식 앱에서는 false)
+function wUrl(i){return AUDIO_BASE+PREFIX+"_w"+i+".mp3";}
+function wkoUrl(i){return AUDIO_BASE+PREFIX+"_w"+i+"_ko.mp3";}
+function sUrl(i){return AUDIO_BASE+PREFIX+"_s"+i+".mp3";}
+
+// ═════ 데이터 ═════
+const SET={"setno": 10, "words": [{"i": 1, "w": "novelist", "spoken": "novelist", "groups": [["명", "소설가"]], "kspk": "소설가", "defn": "꾸며 낸 긴 이야기를 쓰는 사람을 '소설가'라고 해요.", "kex": "내가 좋아하는 [[소설가]]의 새 책이 나왔어요.", "en": "The novelist writes long stories.", "enko": "소설가는 긴 이야기를 써요.", "enhl": "The <span class=\"hl\">novelist<\/span> writes long stories."}, {"i": 2, "w": "astronaut", "spoken": "astronaut", "groups": [["명", "우주비행사"]], "kspk": "우주비행사", "defn": "우주선을 타고 우주로 나가는 사람을 '우주비행사'라고 해요.", "kex": "달에 가는 [[우주비행사]]가 되고 싶어요.", "en": "An astronaut flies into space.", "enko": "우주비행사는 우주로 날아가요.", "enhl": "An <span class=\"hl\">astronaut<\/span> flies into space."}, {"i": 3, "w": "detective", "spoken": "detective", "groups": [["명", "탐정"]], "kspk": "탐정", "defn": "사건의 단서를 찾아 범인을 알아내는 사람을 '탐정'이라고 해요.", "kex": "만화 속 [[탐정]]이 사라진 보석을 찾았어요.", "en": "The detective looks for clues.", "enko": "탐정은 단서를 찾아요.", "enhl": "The <span class=\"hl\">detective<\/span> looks for clues."}, {"i": 4, "w": "secretary", "spoken": "secretary", "groups": [["명", "비서"]], "kspk": "비서", "defn": "높은 사람의 일을 도와주는 사람을 '비서'라고 해요.", "kex": "회장님의 일정을 [[비서]]가 꼼꼼히 정리해요.", "en": "The secretary answers the phone.", "enko": "비서가 전화를 받아요.", "enhl": "The <span class=\"hl\">secretary<\/span> answers the phone."}, {"i": 5, "w": "illustrator", "spoken": "illustrator", "groups": [["명", "삽화가"]], "kspk": "삽화가", "defn": "책이나 글에 들어가는 그림을 그리는 사람을 '삽화가'라고 해요.", "kex": "[[삽화가]]가 되려고 매일 스케치북에 연습해요.", "en": "An illustrator draws pictures for books.", "enko": "삽화가는 책에 들어갈 그림을 그려요.", "enhl": "An <span class=\"hl\">illustrator<\/span> draws pictures for books."}, {"i": 6, "w": "journalist", "spoken": "journalist", "groups": [["명", "기자, 언론인"]], "kspk": "기자, 언론인", "defn": "신문이나 방송에 실을 소식을 쓰는 사람을 '기자'라고 해요. 뉴스를 다루는 일을 하는 사람은 '언론인'이라고 해요.", "kex": "[[기자]]가 되어 학교 신문을 만들고 싶어요.", "en": "A journalist writes for newspapers and magazines.", "enko": "기자는 신문과 잡지에 글을 써요.", "enhl": "A <span class=\"hl\">journalist<\/span> writes for newspapers and magazines."}, {"i": 7, "w": "counselor", "spoken": "counselor", "groups": [["명", "상담역, 고문"]], "kspk": "상담역, 고문", "defn": "어려운 일을 의논하면 도와주는 사람을 '상담역'이라고 해요. 전문적인 조언을 해 주는 사람은 '고문'이라고 해요.", "kex": "고민이 있을 때 [[상담역]] 선생님과 이야기해요.", "en": "A counselor gives advice to students.", "enko": "상담역은 학생들에게 조언을 해요.", "enhl": "A <span class=\"hl\">counselor<\/span> gives advice to students."}, {"i": 8, "w": "salesperson", "spoken": "salesperson", "groups": [["명", "판매원"]], "kspk": "판매원", "defn": "가게에서 물건을 파는 사람을 '판매원'이라고 해요.", "kex": "시장 [[판매원]] 아주머니가 귤을 덤으로 주셨어요.", "en": "The salesperson showed me a new phone.", "enko": "판매원이 나에게 새 휴대폰을 보여 줬어요.", "enhl": "The <span class=\"hl\">salesperson<\/span> showed me a new phone."}, {"i": 9, "w": "be good at", "spoken": "be good at", "groups": [["숙어", "~에 능숙하다, ~을 잘하다"]], "kspk": "무엇에 능숙하다, 무엇을 잘하다", "defn": "어떤 일을 솜씨 좋게 잘하는 것을 '~에 능숙하다'라고 해요. 어떤 일을 잘해 내는 것은 '~을 잘하다'라고 해요.", "kex": "지아는 그림 그리기에 [[능숙해요]].", "en": "I want to be good at math.", "enko": "나는 수학을 잘하고 싶어요.", "enhl": "I want to <span class=\"hl\">be good at<\/span> math."}, {"i": 10, "w": "be[become] interested in", "spoken": "be interested in", "groups": [["숙어", "~에 관심이[흥미가] 있다"]], "kspk": "무엇에 관심이 있다, 무엇에 흥미가 있다", "defn": "어떤 것에 마음이 끌려 알고 싶어 하는 것을 '~에 관심이 있다'라고 해요. 재미를 느끼는 것은 '~에 흥미가 있다'라고 해요.", "kex": "나는 우주에 [[관심이 있어요]].", "en": "Many kids are interested in dinosaurs.", "enko": "많은 아이들이 공룡에 관심이 있어요.", "enhl": "Many kids <span class=\"hl\">are interested in<\/span> dinosaurs."}], "q1": [{"w": "journalist", "widx": 5, "ans": 0, "opts": [{"t": "기자, 언론인", "en": "journalist"}, {"t": "물가, 기슭", "en": "shore"}, {"t": "체포", "en": "arrest"}, {"t": "기후", "en": "climate"}]}, {"w": "secretary", "widx": 3, "ans": 3, "opts": [{"t": "교통(량)", "en": "traffic"}, {"t": "열", "en": "heat"}, {"t": "기금", "en": "fund"}, {"t": "비서", "en": "secretary"}]}, {"w": "novelist", "widx": 0, "ans": 2, "opts": [{"t": "파일, 서류", "en": "file"}, {"t": "요금", "en": "fare"}, {"t": "소설가", "en": "novelist"}, {"t": "도장, 인감, 봉인", "en": "seal"}]}, {"w": "detective", "widx": 2, "ans": 1, "opts": [{"t": "계단, 층계", "en": "stair"}, {"t": "탐정", "en": "detective"}, {"t": "문명", "en": "civilization"}, {"t": "궤도", "en": "orbit"}]}, {"w": "salesperson", "widx": 7, "ans": 2, "opts": [{"t": "(한 묶음의) 다발, 뭉치", "en": "bundle"}, {"t": "통로", "en": "aisle"}, {"t": "판매원", "en": "salesperson"}, {"t": "축제", "en": "festival"}]}, {"w": "counselor", "widx": 6, "ans": 3, "opts": [{"t": "자외선 차단제", "en": "sunblock"}, {"t": "장애, 장애물", "en": "obstacle"}, {"t": "상태, 상황", "en": "condition"}, {"t": "상담역, 고문", "en": "counselor"}]}, {"w": "be[become] interested in", "widx": 9, "ans": 0, "opts": [{"t": "~에 관심이[흥미가] 있다", "en": "be[become] interested in"}, {"t": "~으로 이루어지다, 구성되다", "en": "consist of"}, {"t": "~을 찾아내다, 알아내다", "en": "find out"}, {"t": "~와 비슷하다, 유사하다", "en": "be similar to"}]}, {"w": "astronaut", "widx": 1, "ans": 1, "opts": [{"t": "철도 선로, 궤도", "en": "track"}, {"t": "우주비행사", "en": "astronaut"}, {"t": "나방, 좀벌레", "en": "moth"}, {"t": "제비", "en": "swallow"}]}, {"w": "illustrator", "widx": 4, "ans": 2, "opts": [{"t": "여가, 한가한 시간", "en": "leisure"}, {"t": "빗자루", "en": "broom"}, {"t": "삽화가", "en": "illustrator"}, {"t": "로켓", "en": "rocket"}]}, {"w": "be good at", "widx": 8, "ans": 0, "opts": [{"t": "~에 능숙하다, ~을 잘하다", "en": "be good at"}, {"t": "(TV·전기·가스 등을) 켜다", "en": "turn on"}, {"t": "~에서 멀리, 전혀 ~이 아닌", "en": "far from"}, {"t": "줄곧, 내내", "en": "all the time"}]}], "q2": [{"q": "The __________ answers the phone.", "ko": "비서가 전화를 받아요.", "ans": 3, "opts": [{"t": "grain", "ko": "곡물, 곡류"}, {"t": "swimsuit", "ko": "수영복"}, {"t": "saw", "ko": "톱"}, {"t": "secretary", "ko": "비서"}], "meaning": "비서"}, {"q": "The __________ looks for clues.", "ko": "탐정은 단서를 찾아요.", "ans": 2, "opts": [{"t": "turn", "ko": "회전, 방향 전환"}, {"t": "pleasure", "ko": "기쁨"}, {"t": "detective", "ko": "탐정"}, {"t": "environment", "ko": "환경"}], "meaning": "탐정"}, {"q": "I want to __________ math.", "ko": "나는 수학을 잘하고 싶어요.", "ans": 1, "opts": [{"t": "consist of", "ko": "~으로 이루어지다, 구성되다"}, {"t": "be good at", "ko": "~에 능숙하다, ~을 잘하다"}, {"t": "far from", "ko": "~에서 멀리, 전혀 ~이 아닌"}, {"t": "get along with", "ko": "~와 잘 지내다, 어울리다"}], "meaning": "~에 능숙하다, ~을 잘하다"}, {"q": "An __________ draws pictures for books.", "ko": "삽화가는 책에 들어갈 그림을 그려요.", "ans": 2, "opts": [{"t": "iron", "ko": "다리미, 철"}, {"t": "effect", "ko": "영향, 효과"}, {"t": "illustrator", "ko": "삽화가"}, {"t": "eagle", "ko": "독수리"}], "meaning": "삽화가"}, {"q": "Many kids __________ dinosaurs.", "ko": "많은 아이들이 공룡에 관심이 있어요.", "ans": 0, "opts": [{"t": "are interested in", "ko": "~에 관심이[흥미가] 있다"}, {"t": "turn on", "ko": "(TV·전기·가스 등을) 켜다"}, {"t": "cut off", "ko": "잘라내다, 차단하다"}, {"t": "run away", "ko": "도망치다, 달아나다"}], "meaning": "~에 관심이[흥미가] 있다"}, {"q": "An __________ flies into space.", "ko": "우주비행사는 우주로 날아가요.", "ans": 0, "opts": [{"t": "astronaut", "ko": "우주비행사"}, {"t": "ache", "ko": "통증, 아픔"}, {"t": "athlete", "ko": "(운동)선수"}, {"t": "eraser", "ko": "지우개"}], "meaning": "우주비행사"}, {"q": "The __________ showed me a new phone.", "ko": "판매원이 나에게 새 휴대폰을 보여 줬어요.", "ans": 2, "opts": [{"t": "candidate", "ko": "후보자"}, {"t": "harvest", "ko": "수확, 수확물"}, {"t": "salesperson", "ko": "판매원"}, {"t": "maple", "ko": "단풍나무"}], "meaning": "판매원"}, {"q": "A __________ gives advice to students.", "ko": "상담역은 학생들에게 조언을 해요.", "ans": 3, "opts": [{"t": "scale", "ko": "체중계, 저울"}, {"t": "technology", "ko": "기술"}, {"t": "biology", "ko": "생물학"}, {"t": "counselor", "ko": "상담역, 고문"}], "meaning": "상담역, 고문"}, {"q": "The __________ writes long stories.", "ko": "소설가는 긴 이야기를 써요.", "ans": 1, "opts": [{"t": "costume", "ko": "복장, 의상, 분장, 변장"}, {"t": "novelist", "ko": "소설가"}, {"t": "sideburns", "ko": "구레나룻"}, {"t": "merry-go-round", "ko": "회전목마"}], "meaning": "소설가"}, {"q": "A __________ writes for newspapers and magazines.", "ko": "기자는 신문과 잡지에 글을 써요.", "ans": 3, "opts": [{"t": "camp", "ko": "야영, 캠프, 야영지"}, {"t": "security", "ko": "보안, 안전"}, {"t": "tradition", "ko": "전통, 관습"}, {"t": "journalist", "ko": "기자, 언론인"}], "meaning": "기자, 언론인"}], "ro": [{"widx": 0, "pieces": ["The novelist", "writes", "long stories."], "ko": "소설가는 긴 이야기를 써요."}, {"widx": 1, "pieces": ["An astronaut", "flies", "into space."], "ko": "우주비행사는 우주로 날아가요."}, {"widx": 2, "pieces": ["The detective", "looks", "for clues."], "ko": "탐정은 단서를 찾아요."}, {"widx": 3, "pieces": ["The secretary", "answers", "the phone."], "ko": "비서가 전화를 받아요."}, {"widx": 4, "pieces": ["An illustrator", "draws pictures", "for books."], "ko": "삽화가는 책에 들어갈 그림을 그려요."}, {"widx": 5, "pieces": ["A journalist writes", "for newspapers", "and magazines."], "ko": "기자는 신문과 잡지에 글을 써요."}, {"widx": 6, "pieces": ["A counselor", "gives advice", "to students."], "ko": "상담역은 학생들에게 조언을 해요."}, {"widx": 7, "pieces": ["The salesperson", "showed me", "a new phone."], "ko": "판매원이 나에게 새 휴대폰을 보여 줬어요."}, {"widx": 8, "pieces": ["I want", "to be good", "at math."], "ko": "나는 수학을 잘하고 싶어요."}, {"widx": 9, "pieces": ["Many kids", "are interested", "in dinosaurs."], "ko": "많은 아이들이 공룡에 관심이 있어요."}]};
+const WORDS=SET.words;
+
+// ═════ 내 기기 음성 속도 미세조정 ═════
+var ttsOffset=0;try{ttsOffset=parseFloat(localStorage.getItem('wm_ttsOffset'))||0;}catch(e){}
+function updateTtOffsetLabel(){var el=document.getElementById('ttOffsetLabel');if(!el)return;el.textContent=ttsOffset===0?'기본':(ttsOffset>0?'+':'')+ttsOffset.toFixed(2);}
+function adjustTtsOffset(d){ttsOffset=Math.round((ttsOffset+d)*100)/100;if(ttsOffset>0.4)ttsOffset=0.4;if(ttsOffset<-0.4)ttsOffset=-0.4;try{localStorage.setItem('wm_ttsOffset',ttsOffset);}catch(e){}updateTtOffsetLabel();}
+function resetTtsOffset(){ttsOffset=0;try{localStorage.setItem('wm_ttsOffset',0);}catch(e){}updateTtOffsetLabel();}
+function effRate(r){var v=(r||1)+ttsOffset;if(v<0.3)v=0.3;if(v>2.5)v=2.5;return v;}
+updateTtOffsetLabel();
+
+// ═════ 오디오 엔진 (iOS 대응: 하나의 Audio 객체를 계속 사용) ═════
+let sharedAudio=null,curRes=null,runId=0,noticeShown=false;
+function getAudio(){if(!sharedAudio)sharedAudio=new Audio();return sharedAudio;}
+function finishCur(){var r=curRes;curRes=null;if(r)r();}
+function stopAudio(){
+  var a=sharedAudio;
+  if(a){a.onended=null;a.onerror=null;try{a.pause();}catch(e){}}
+  try{if(window.speechSynthesis)speechSynthesis.cancel();}catch(e){}
+  finishCur();
+}
+function showNotice(kind,url){
+  var el=document.getElementById('audioNotice');if(!el)return;
+  if(kind==='tts'){el.innerHTML='🔔 샘플 미리듣기: 음원(mp3)이 아직 없어서 기계음으로 대신 들려드려요. 정식 앱에서는 미리 만든 음원이 나와요.<br><small>불러오지 못한 주소: '+(url||'')+'</small>';}
+  else{el.textContent='🔇 음원을 불러오지 못했어요. 인터넷 연결을 확인하고 다시 눌러 주세요.';}
+  el.style.display='block';
+}
+function speakTTS(fb){
+  return new Promise(function(res){
+    try{
+      if(!window.speechSynthesis||typeof SpeechSynthesisUtterance==='undefined'){res();return;}
+      speechSynthesis.cancel();
+      var u=new SpeechSynthesisUtterance(fb.text);u.lang=fb.lang;u.rate=Math.max(0.3,Math.min(2,(fb.rate||0.85)+ttsOffset));
+      curRes=res;u.onend=function(){if(curRes===res)curRes=null;res();};u.onerror=function(){if(curRes===res)curRes=null;res();};
+      speechSynthesis.speak(u);
+    }catch(e){res();}
+  });
+}
+// url 재생. fb = {text,lang,rate} (샘플 미리듣기용)
+function play(url,rate,fb){
+  return new Promise(function(res){
+    finishCur();curRes=res;
+    var a=getAudio();a.onended=null;a.onerror=null;try{a.pause();}catch(e){}
+    var failed=false;
+    function fail(){
+      if(failed||curRes!==res)return;failed=true;
+      if(SAMPLE_PREVIEW_TTS&&fb){showNotice('tts',url);curRes=null;speakTTS(fb).then(res);}
+      else{showNotice('err',url);curRes=null;res();}
+    }
+    a.onended=function(){if(curRes===res)curRes=null;res();};
+    a.onerror=fail;
+    a.src=url;a.currentTime=0;a.playbackRate=effRate(rate);
+    var p=a.play();if(p&&p.catch)p.catch(fail);
+  });
+}
+function wait(ms){return new Promise(function(r){setTimeout(r,ms);});}
+function fbEn(t){return {text:t,lang:'en-US',rate:0.8};}
+function fbKo(t){return {text:t,lang:'ko-KR',rate:0.9};}
+function playW(i,rate){var w=WORDS[i];return play(wUrl(w.i),rate,fbEn(w.spoken));}
+function playKo(i){var w=WORDS[i];return play(wkoUrl(w.i),1.0,fbKo(w.kspk));}
+function playS(i,rate){var w=WORDS[i];return play(sUrl(w.i),rate,fbEn(w.en));}
+// 재생 권한 확보(iOS): 클릭 직후 첫 음원을 무음으로 한 번 재생
+function primeAudio(url){
+  var a=getAudio();a.muted=true;a.src=url;
+  var p=a.play();
+  if(p&&p.then){p.then(function(){try{a.pause();a.currentTime=0;}catch(e){}a.muted=false;}).catch(function(){a.muted=false;});}else{a.muted=false;}
+}
+function stopAll(){
+  runId++;stopAudio();
+  document.querySelectorAll('.playing').forEach(function(e){e.classList.remove('playing');});
+  var now=document.getElementById('read-now');if(now)now.innerHTML='<span class="lbl">재생중</span><span class="now-txt">–</span>';
+}
+
+// ═════ 탭 ═════
+function goTab(name,btn){
+  stopAll();
+  document.querySelectorAll('.panel').forEach(function(p){p.classList.remove('active');});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('panel-'+name).classList.add('active');
+  btn.classList.add('active');
+}
+
+// ═════ ① 단어장 ═════
+function posTags(w){return w.groups.map(function(g){return g[0];}).filter(function(x,i,a){return x&&a.indexOf(x)===i;}).map(function(p){return '<span class="tag-pos">'+p+'</span>';}).join('');}
+function buildVocab(){
+  var g=document.getElementById('vc-core');g.innerHTML='';
+  WORDS.forEach(function(w,i){
+    var c=document.createElement('div');c.className='flip-card';
+    var back=w.groups.map(function(x){return (x[0]?'<span class="tag-pos tag-inv">'+x[0]+'</span>':'')+x[1];}).join('<br>');
+    c.innerHTML='<div class="flip-inner"><div class="flip-front"><div class="f-word">'+w.w+'</div><div class="f-pos">'+posTags(w)+'</div><div class="f-snd" data-i="'+i+'">🔊</div></div>'+
+      '<div class="flip-back"><div class="f-mean">'+back+'</div><div class="f-ex">'+w.en+'</div></div></div>';
+    c.onclick=function(){
+      var on=c.classList.toggle('flipped');
+      stopAll();if(on)playKo(i);          // 뜻이 나타나면 한글 뜻을 읽어 줌
+    };
+    c.querySelector('.f-snd').onclick=function(ev){
+      ev.stopPropagation();stopAll();playW(i,1.0);   // 스피커는 영어 단어만
+    };
+    g.appendChild(c);
+  });
+}
+
+// ═════ ② 한글 뜻 풀이 ═════
+function hlKo(t){return t.replace(/\[\[(.*?)\]\]/g,'<mark>$1</mark>');}
+function buildExplain(){
+  var c=document.getElementById('ex-list');c.innerHTML='';
+  WORDS.forEach(function(w){
+    var m=w.groups.map(function(x){return (x[0]?'<span class="tag-pos">'+x[0]+'</span>':'')+x[1];}).join(' &nbsp; ');
+    var d=document.createElement('div');d.className='xp-card';
+    d.innerHTML='<div class="xp-top"><span class="xp-no">'+w.i+'</span><span class="xp-word">'+w.w+'</span></div>'+
+      '<div class="xp-mean">'+m+'</div><div class="xp-def">'+w.defn+'</div>'+
+      '<div class="xp-ex"><span class="xp-lbl">예</span> '+hlKo(w.kex)+'</div>';
+    c.appendChild(d);
+  });
+}
+
+// ═════ ③ 낭독 ═════
+let readRate=1.0;
+function isComplex(s){return /,/.test(s)||/\b(but|when|if|as|because|so that|although)\b/i.test(s)||(s.match(/[.!?]/g)||[]).length>1;}
+function readGap(s){return isComplex(s)?7000:5000;}
+function ids(i,p){return 'read-card-'+i+'-'+p;}
+async function playLine(i,p,rate){
+  if(p===1){await playW(i,rate);if(!alive)return;await wait(350);if(!alive)return;await playKo(i);}
+  else{await playS(i,rate);}
+}
+var alive=true;
+function buildRead(){
+  var c=document.getElementById('read-list');c.innerHTML='';
+  WORDS.forEach(function(w,i){
+    var pair=document.createElement('div');pair.className='read-pair';
+    [1,2].forEach(function(p){
+      var card=document.createElement('div');card.className='sent-card read-card';card.id=ids(i,p);card.classList.add('rd-p'+p);
+      var num=document.createElement('div');num.className='s-num s-num-w';num.id='read-num-'+i+'-'+p;num.textContent=w.i+'-'+p;
+      num.onclick=async function(){
+        stopAll();var my=runId;setRead(i,p,true);setReadNow(i,p,p===1?('🔊 '+w.w+' → 뜻'):('🗣 '+w.en));
+        alive=true;var chk=setInterval(function(){alive=(my===runId);},30);
+        await playLine(i,p,readRate);clearInterval(chk);
+        if(my===runId){setRead(i,p,false);setReadNow(-1);}
+      };
+      var box=document.createElement('div');box.className='read-box';
+      if(p===1){
+        box.innerHTML='<div class="rd-word">'+w.w+'</div><div class="kohide"><span class="rd-mean">'+w.groups.map(function(x){return x[1];}).join(', ')+'</span></div>';
+      }else{
+        box.innerHTML='<div class="rd-sent">'+w.enhl+'</div><div class="kohide"><div class="rd-ko">'+w.enko+'</div></div>';
+      }
+      var kb=document.createElement('button');kb.className='btn-ko-row';kb.textContent='뜻 보기';
+      kb.onclick=function(){var on=card.classList.toggle('ko-on');kb.textContent=on?'뜻 숨기기':'뜻 보기';syncKoBtn();};
+      card.appendChild(num);card.appendChild(box);card.appendChild(kb);pair.appendChild(card);
+    });
+    c.appendChild(pair);
+  });
+}
+function setRead(i,p,on){
+  var card=document.getElementById(ids(i,p)),num=document.getElementById('read-num-'+i+'-'+p);
+  if(!card)return;card.classList.toggle('playing',on);num.classList.toggle('playing',on);
+}
+function setReadNow(i,p,step){
+  var el=document.getElementById('read-now');if(!el)return;
+  if(i<0){el.innerHTML='<span class="lbl">재생중</span><span class="now-txt">–</span>';return;}
+  el.innerHTML='<span class="lbl">'+WORDS[i].i+'-'+p+'</span><span class="now-txt">'+step+'</span>';
+}
+// 전체 재생: 단어 → (짧은 간격) → 한글 뜻 → (따라 말하기) → 예문 → (따라 읽기) → 다음
+async function playAllRead(){
+  stopAll();
+  primeAudio(wUrl(WORDS[0].i));
+  await wait(150);var my=++runId;
+  for(var i=0;i<WORDS.length;i++){
+    if(my!==runId)return;
+    var w=WORDS[i];
+    setRead(i,1,true);setReadNow(i,1,'🔊 '+w.w+' → 뜻');
+    await playW(i,readRate);if(my!==runId)return;
+    await wait(350);if(my!==runId)return;
+    await playKo(i);if(my!==runId)return;
+    await wait(1500);if(my!==runId)return;           // 단어 따라 말하기
+    setRead(i,1,false);setRead(i,2,true);setReadNow(i,2,'🗣 따라 읽어요: '+w.en);
+    await playS(i,readRate);if(my!==runId)return;
+    await wait(readGap(w.en));if(my!==runId)return;  // 문장 따라 읽기
+    setRead(i,2,false);await wait(500);
+  }
+  setReadNow(-1);
+}
+function setReadSpd(r,btn){readRate=r;document.querySelectorAll('.spd-read').forEach(function(b){b.classList.remove('sel');});btn.classList.add('sel');}
+var KO_LBL={1:['단어 뜻','btn-ko-1'],2:['예문 해석','btn-ko-2']};
+function syncKoBtn(){
+  [1,2].forEach(function(p){
+    var cards=document.querySelectorAll('.read-card.rd-p'+p),on=document.querySelectorAll('.read-card.rd-p'+p+'.ko-on');
+    var b=document.getElementById(KO_LBL[p][1]);
+    if(b)b.textContent=(cards.length&&on.length===cards.length)?('🙈 '+KO_LBL[p][0]+' 모두 숨기기'):('👁 '+KO_LBL[p][0]+' 모두 보기');
+  });
+}
+function toggleKo(p){
+  var cards=document.querySelectorAll('.read-card.rd-p'+p);
+  var allOn=document.querySelectorAll('.read-card.rd-p'+p+'.ko-on').length===cards.length;
+  cards.forEach(function(c){c.classList.toggle('ko-on',!allOn);var k=c.querySelector('.btn-ko-row');if(k)k.textContent=allOn?'뜻 보기':'뜻 숨기기';});
+  syncKoBtn();
+}
+
+// ═════ ④ 4지선다 ═════
+let mcOk=0;
+const NUMS=['①','②','③','④'];
+function buildMC(){
+  var c=document.getElementById('mc-wrap');c.innerHTML='';mcOk=0;document.getElementById('mc-ok').textContent=0;
+  var total=SET.q1.length+SET.q2.length;document.getElementById('mc-tot').textContent=total;
+  var n=0;
+  function head(t,d){var h=document.createElement('div');h.className='step-head';h.innerHTML='<b>'+t+'</b><span>'+d+'</span>';c.appendChild(h);}
+  head('1단계 · 단어 뜻 찾기','영어 단어의 한글 뜻을 골라요 (1~'+SET.q1.length+'번)');
+  SET.q1.forEach(function(q){
+    n++;var num=n;
+    var card=document.createElement('div');card.className='q-card';
+    card.innerHTML='<div class="q-num">['+num+'번]</div><div class="q-text">다음 단어의 뜻은? &nbsp; <b class="q-en">'+q.w+'</b> <span class="mini-snd">🔊</span></div>';
+    card.querySelector('.mini-snd').onclick=function(){stopAll();playW(q.widx,1.0);};
+    var correct=q.opts[q.ans].t;
+    var others=q.opts.map(function(o,i){return i===q.ans?null:(NUMS[i]+' '+o.t+' ('+o.en+')');}).filter(Boolean).join(' &nbsp; ');
+    addOptions(card,q.opts.map(function(o){return o.t;}),q.ans,'<b>'+q.w+'</b> = '+correct+'<br><span class="exp-sub">다른 보기는 다른 단어의 뜻이에요: '+others+'</span>');
+    c.appendChild(card);
+  });
+  head('2단계 · 빈칸 채우기','한글 해석을 보고 빈칸에 알맞은 단어를 골라요 ('+(SET.q1.length+1)+'~'+total+'번)');
+  SET.q2.forEach(function(q){
+    n++;var num=n;
+    var card=document.createElement('div');card.className='q-card';
+    card.innerHTML='<div class="q-num">['+num+'번]</div><div class="q-text">'+q.q.replace('__________','<span class="blank-span"></span>')+'</div><div class="q-ko">'+q.ko+'</div>';
+    var others=q.opts.map(function(o,i){return i===q.ans?null:(NUMS[i]+' '+o.t+' ('+o.ko+')');}).filter(Boolean).join(' &nbsp; ');
+    addOptions(card,q.opts.map(function(o){return o.t;}),q.ans,'정답은 <b>'+q.opts[q.ans].t+'</b> ('+q.meaning+')예요. 한글 해석에서 같은 뜻을 찾아보세요.<br><span class="exp-sub">다른 보기: '+others+'</span>');
+    c.appendChild(card);
+  });
+}
+function addOptions(card,texts,ans,expHtml){
+  var opts=document.createElement('div');opts.className='opts';
+  texts.forEach(function(t,oi){
+    var b=document.createElement('button');b.className='opt';b.innerHTML=NUMS[oi]+' '+t;
+    b.onclick=function(){
+      if(b.disabled)return;
+      opts.querySelectorAll('.opt').forEach(function(x){x.disabled=true;});
+      if(oi===ans){b.classList.add('ok');mcOk++;document.getElementById('mc-ok').textContent=mcOk;}
+      else{b.classList.add('ng');opts.querySelectorAll('.opt')[ans].classList.add('ok');}
+      card.querySelector('.exp').classList.add('show');
+    };
+    opts.appendChild(b);
+  });
+  card.appendChild(opts);
+  var e=document.createElement('div');e.className='exp';e.innerHTML='<div class="exp-lbl">해설</div>'+expHtml;card.appendChild(e);
+}
+function resetMC(){buildMC();}
+
+// ═════ ⑤ 문장재배열 ═════
+let roOk=0,roAns=[];
+function shuffleIdx(n){
+  var a=[];for(var i=0;i<n;i++)a.push(i);
+  for(var t=0;t<50;t++){
+    for(var i=n-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var x=a[i];a[i]=a[j];a[j]=x;}
+    var same=a.every(function(v,k){return v===k;});
+    if(!same||n<2)break;
+  }
+  return a;
+}
+function buildRO(){
+  var c=document.getElementById('ro-wrap');c.innerHTML='';roOk=0;document.getElementById('ro-ok').textContent=0;
+  document.getElementById('ro-tot').textContent=SET.ro.length;
+  roAns=SET.ro.map(function(){return [];});
+  SET.ro.forEach(function(item,si){
+    var card=document.createElement('div');card.className='q-card';
+    var qt=document.createElement('div');qt.className='ro-q';
+    qt.innerHTML='<span style="color:#c05010;font-weight:700;">['+(si+1)+'번]</span> 조각을 올바른 순서로 눌러요.<br><span class="ro-ko">💬 '+item.ko+'</span>';
+    card.appendChild(qt);
+    var ca=document.createElement('div');ca.className='chip-area';
+    var aa=document.createElement('div');aa.className='ans-area';
+    var rs=document.createElement('div');rs.className='ro-result';
+    shuffleIdx(item.pieces.length).forEach(function(pi){
+      var ch=document.createElement('div');ch.className='chip';ch.textContent=item.pieces[pi];ch.dataset.pi=pi;
+      ch.onclick=function(){
+        if(ch.classList.contains('used'))return;
+        ch.classList.add('used');roAns[si].push({pi:pi,el:ch});renderRO(si,aa,rs,item);
+      };
+      ca.appendChild(ch);
+    });
+    card.appendChild(ca);card.appendChild(aa);card.appendChild(rs);
+    var rb=document.createElement('button');rb.className='btn-sm';rb.style.marginTop='8px';rb.textContent='↺ 초기화';
+    rb.onclick=function(){roAns[si]=[];ca.querySelectorAll('.chip').forEach(function(x){x.classList.remove('used');});aa.innerHTML='';rs.textContent='';rs.className='ro-result';};
+    card.appendChild(rb);c.appendChild(card);
+  });
+}
+function renderRO(si,aa,rs,item){
+  aa.innerHTML='';
+  roAns[si].forEach(function(it,idx){
+    var ac=document.createElement('div');ac.className='ans-chip';ac.textContent=item.pieces[it.pi];
+    ac.onclick=function(){it.el.classList.remove('used');roAns[si].splice(idx,1);renderRO(si,aa,rs,item);};
+    aa.appendChild(ac);
+  });
+  if(roAns[si].length===item.pieces.length){
+    var ok=roAns[si].every(function(it,k){return it.pi===k;});
+    if(ok){rs.textContent='✓ 정답입니다!';rs.className='ro-result ok';roOk++;document.getElementById('ro-ok').textContent=roOk;}
+    else{rs.innerHTML='✗ 다시 확인해 보세요.<br><span style="color:#5070a0;font-size:12px;">정답: '+item.pieces.join(' ')+'</span>';rs.className='ro-result ng';}
+  }else{rs.textContent='';rs.className='ro-result';}
+}
+function resetRO(){buildRO();}
+
+// ═════ ⑥ 단어 받아쓰기 ═════
+let dRate=1.0;
+let dOrder=null;
+function newDictOrder(){
+  var n=WORDS.length,prev=dOrder,o=shuffleIdx(n);
+  for(var t=0;t<50&&prev&&o.every(function(v,k){return v===prev[k];});t++)o=shuffleIdx(n);
+  dOrder=o;
+}
+function buildDict(){
+  if(!dOrder)newDictOrder();
+  var c=document.getElementById('dict-list');c.innerHTML='';
+  dOrder.forEach(function(wi,k){
+    var w=WORDS[wi];
+    var card=document.createElement('div');card.className='dict-card';
+    var num=document.createElement('div');num.className='d-num';num.textContent=k+1;
+    num.onclick=function(){
+      stopAll();document.querySelectorAll('.d-num').forEach(function(n){n.classList.remove('pd');});
+      num.classList.add('pd');var my=runId;
+      playW(wi,dRate).then(function(){num.classList.remove('pd');});
+    };
+    var hint=document.createElement('div');hint.className='d-hint';hint.textContent='문제 '+(k+1)+' — 번호를 눌러 들으세요';
+    card.appendChild(num);card.appendChild(hint);c.appendChild(card);
+  });
+  var ans=document.getElementById('dict-ans');
+  ans.innerHTML=dOrder.map(function(wi,k){
+    var w=WORDS[wi];
+    return '<div class="da-row"><span class="da-n">'+(k+1)+'</span><b>'+w.w+'</b> <span class="da-ko">'+w.groups.map(function(g){return g[1];}).join(' / ')+'</span></div>';
+  }).join('');
+  ans.style.display='none';
+  var tb=document.getElementById('dict-ans-btn');tb.textContent='✅ 받아쓰기 정답 확인하기';
+}
+function toggleDictAns(){
+  var ans=document.getElementById('dict-ans'),tb=document.getElementById('dict-ans-btn');
+  var open=ans.style.display==='none';
+  ans.style.display=open?'block':'none';
+  tb.textContent=open?'▲ 정답 닫기':'✅ 받아쓰기 정답 확인하기';
+}
+function reshuffleDict(){stopAll();newDictOrder();buildDict();window.scrollTo(0,0);}
+function setDspd(r,key){dRate=r;['normal','slow'].forEach(function(k){document.getElementById('ds-'+k).classList.remove('sel');});document.getElementById('ds-'+key).classList.add('sel');}
+
+// ═════ 맨 위로 버튼 ═════
+function goTop(){try{window.scrollTo({top:0,behavior:'smooth'});}catch(e){window.scrollTo(0,0);}}
+window.addEventListener('scroll',function(){
+  var b=document.getElementById('toTop');if(!b)return;
+  var y=window.pageYOffset||document.documentElement.scrollTop||0;
+  b.classList.toggle('show',y>300);
+});
+
+// ═════ 초기 실행 ═════
+buildVocab();buildExplain();buildRead();buildMC();buildRO();buildDict();
+
+</script>
+</body>
+</html>
