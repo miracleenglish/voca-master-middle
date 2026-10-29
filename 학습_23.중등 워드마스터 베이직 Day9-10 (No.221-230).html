@@ -175,10 +175,11 @@ header h1{font-size:15px;color:#2a6db5;font-weight:700}
 .ro-ko{font-size:13px;color:#2a6db5;font-weight:600}
 .d-num.pd{background:#2a6db5;color:#fff}
 header{padding:12px 18px}
-.to-top{position:fixed;right:14px;bottom:18px;width:52px;height:56px;border-radius:6px;border:1px solid #cfd6e0;background:rgba(245,246,248,.96);color:#2b3544;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.18);display:none;flex-direction:column;align-items:center;justify-content:center;gap:1px;z-index:50;padding:0;font-family:inherit}
-.to-top svg{width:22px;height:22px}
-.to-top span{font-size:12px;font-weight:700;letter-spacing:.5px;line-height:1}
-.to-top.show{display:flex}.to-top:hover{background:#e6e9ee}
+.dict-re{margin-left:auto;font-size:14px;font-weight:700;padding:10px 14px;background:#3a4a8f;color:#fff;border:0;border-radius:10px}.ctrl-bar{flex-wrap:wrap}.btn-sm.dict-re:hover,.btn-sm.dict-re:focus,.btn-sm.dict-re:active{background:#ff6fa5;color:#fff;border:0;outline:none}.btn-sm.dict-re:active{transform:scale(.97)}.dict-foot{margin-top:16px;display:flex;flex-direction:column;align-items:flex-start;gap:10px}.dict-ans{width:100%;box-sizing:border-box;background:#f4f7fc;border:1px solid #d5deee;border-radius:10px;padding:8px 12px;font-size:13px;line-height:1.9;color:#2d3a4a}.da-n{display:inline-block;min-width:22px;color:#c05010;font-weight:700}.da-ko{color:#5070a0}
+.to-top{position:fixed;right:16px;bottom:20px;width:60px;height:64px;border-radius:14px;border:2px solid #fff;background:#3a4a8f;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(35,41,70,.45);display:none;flex-direction:column;align-items:center;justify-content:center;gap:2px;z-index:50;padding:0;font-family:inherit}
+.to-top svg{width:26px;height:26px}
+.to-top span{font-size:13px;font-weight:800;letter-spacing:.5px;line-height:1}
+.to-top.show{display:flex}.to-top:hover{background:#ff6fa5;transform:translateY(-2px)}
 </style>
 </head>
 <body>
@@ -252,13 +253,18 @@ header{padding:12px 18px}
 
 <div id="panel-dict" class="panel">
   <div class="panel-title">⑥ 단어 받아쓰기</div>
-  <div class="panel-desc">번호를 누르면 영어 단어가 나와요. 노트에 철자를 받아쓴 뒤 선생님이 주신 단어 목록으로 확인하세요.</div>
+  <div class="panel-desc">번호를 누르면 영어 단어가 나와요. 노트에 철자를 받아쓰고, 다 쓴 뒤 맨 아래에서 정답을 확인하세요. 한 번 끝나면 순서를 바꿔서 다시 해 볼 수 있어요.</div>
   <div class="ctrl-bar">
     <span class="spd-label">재생 속도</span>
     <button class="btn-sm sel" id="ds-normal" onclick="setDspd(1.0,'normal')">보통</button>
     <button class="btn-sm" id="ds-slow" onclick="setDspd(0.85,'slow')">느리게</button>
+    <button class="btn-sm dict-re" id="dict-re-btn" onclick="reshuffleDict()">🔀 순서 바꿔서 다시 받아쓰기</button>
   </div>
   <div class="dict-list" id="dict-list"></div>
+  <div class="dict-foot">
+    <button class="btn-sm" id="dict-ans-btn" onclick="toggleDictAns()">✅ 받아쓰기 정답 확인하기</button>
+    <div class="dict-ans" id="dict-ans" style="display:none"></div>
+  </div>
 </div>
 
 <script>
@@ -569,20 +575,42 @@ function resetRO(){buildRO();}
 
 // ═════ ⑥ 단어 받아쓰기 ═════
 let dRate=1.0;
+let dOrder=null;
+function newDictOrder(){
+  var n=WORDS.length,prev=dOrder,o=shuffleIdx(n);
+  for(var t=0;t<50&&prev&&o.every(function(v,k){return v===prev[k];});t++)o=shuffleIdx(n);
+  dOrder=o;
+}
 function buildDict(){
+  if(!dOrder)newDictOrder();
   var c=document.getElementById('dict-list');c.innerHTML='';
-  WORDS.forEach(function(w,i){
+  dOrder.forEach(function(wi,k){
+    var w=WORDS[wi];
     var card=document.createElement('div');card.className='dict-card';
-    var num=document.createElement('div');num.className='d-num';num.textContent=w.i;
+    var num=document.createElement('div');num.className='d-num';num.textContent=k+1;
     num.onclick=function(){
       stopAll();document.querySelectorAll('.d-num').forEach(function(n){n.classList.remove('pd');});
       num.classList.add('pd');var my=runId;
-      playW(i,dRate).then(function(){num.classList.remove('pd');});
+      playW(wi,dRate).then(function(){num.classList.remove('pd');});
     };
-    var hint=document.createElement('div');hint.className='d-hint';hint.textContent='단어 '+w.i+' — 번호를 눌러 들으세요';
+    var hint=document.createElement('div');hint.className='d-hint';hint.textContent='문제 '+(k+1)+' — 번호를 눌러 들으세요';
     card.appendChild(num);card.appendChild(hint);c.appendChild(card);
   });
+  var ans=document.getElementById('dict-ans');
+  ans.innerHTML=dOrder.map(function(wi,k){
+    var w=WORDS[wi];
+    return '<div class="da-row"><span class="da-n">'+(k+1)+'</span><b>'+w.w+'</b> <span class="da-ko">'+w.groups.map(function(g){return g[1];}).join(' / ')+'</span></div>';
+  }).join('');
+  ans.style.display='none';
+  var tb=document.getElementById('dict-ans-btn');tb.textContent='✅ 받아쓰기 정답 확인하기';
 }
+function toggleDictAns(){
+  var ans=document.getElementById('dict-ans'),tb=document.getElementById('dict-ans-btn');
+  var open=ans.style.display==='none';
+  ans.style.display=open?'block':'none';
+  tb.textContent=open?'▲ 정답 닫기':'✅ 받아쓰기 정답 확인하기';
+}
+function reshuffleDict(){stopAll();newDictOrder();buildDict();window.scrollTo(0,0);}
 function setDspd(r,key){dRate=r;['normal','slow'].forEach(function(k){document.getElementById('ds-'+k).classList.remove('sel');});document.getElementById('ds-'+key).classList.add('sel');}
 
 // ═════ 맨 위로 버튼 ═════
