@@ -239,7 +239,7 @@ header{padding:12px 18px}
 .pm-board{margin-bottom:6px}.pm-hdr,.pm-open{display:flex;gap:12px}.pm-hdr>div{flex:1}.pm-hdr{margin-bottom:8px}.pm-dgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}.pm-sep{height:0;border-top:2px dashed #c4d3e6;margin:14px 0}
 .pm-col{flex:1;display:flex;flex-direction:column;gap:10px;min-width:0}
 .pm-colh{text-align:center;font-weight:800;font-size:13px;color:#8090a8}
-.pm-tile{min-height:100px;border:2.5px solid #b9c9de;background:#fff;border-radius:16px;padding:10px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;font-family:inherit;transition:all .12s;word-break:keep-all}
+.pm-tile{min-height:124px;border:2.5px solid #b9c9de;background:#fff;border-radius:16px;padding:10px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;cursor:pointer;font-family:inherit;transition:all .12s;word-break:keep-all}
 .pm-tile:hover{border-color:#6f93c8;transform:translateY(-1px)}
 .pm-t-w{font-size:22px;font-weight:800;color:#17306b;line-height:1.2}
 .pm-t-q{font-size:12px;font-weight:800;border-radius:999px;padding:1px 9px;color:#fff;background:#2a6db5}
@@ -284,7 +284,7 @@ header{padding:12px 18px}
 
 <div id="panel-pair" class="panel">
   <div class="panel-title">② 짝 맞추기</div>
-  <div class="panel-desc">왼쪽 본편 단어를 누르고, 오른쪽에서 <b style="color:#2a6db5">비슷한 말</b> 또는 <b style="color:#d9531e">반대말</b>을 찾아 눌러요. 맞추면 두 단어의 뜻과 관계가 크게 나와요. 모두 맞춘 뒤 아래 정리를 읽어 보세요.</div>
+  <div class="panel-desc">왼쪽 단어를 누르고, 오른쪽 본편 단어 중에서 짝인 <b style="color:#2a6db5">비슷한 말</b> 또는 <b style="color:#d9531e">반대말</b>을 찾아 눌러요. 맞추면 두 단어의 뜻과 관계가 크게 나와요. 모두 맞춘 뒤 아래 정리를 읽어 보세요.</div>
   <div class="ctrl-bar"><button class="btn-sm" id="pm-hintbtn" onclick="pmToggleHint()">💡 뜻 힌트 켜기</button><button class="btn-sm pm-reset" onclick="pmReset()">🔀 다시 하기</button></div>
   <div class="pm-status" id="pm-status"></div>
   <div class="pm-focus" id="pm-focus"></div>
@@ -519,16 +519,16 @@ function pmStatus(){
   else el.innerHTML='맞춘 짝 <b>'+PM.matched+'</b> / '+PM.pairs.length+' &nbsp;·&nbsp; 틀린 횟수 '+PM.wrong;
 }
 function pmTileL(id,done){
-  var p=PM.pairs[id],w=WORDS[p.wi],r=REL[p.k],hp=w.pairs[p.pi];
-  return '<button class="pm-tile pm-l '+r.cls+'t'+(done?' done '+r.cls:'')+'" data-side="L" data-id="'+id+'"><span class="pm-t-w">'+p.hw+'</span><span class="pm-t-q">'+r.d+' 찾기</span><span class="pm-t-m">'+hp.m+'</span></button>';
+  var p=PM.pairs[id],w=WORDS[p.wi],r=REL[p.k];
+  return '<button class="pm-tile pm-l '+r.cls+'t'+(done?' done '+r.cls:'')+'" data-side="L" data-id="'+id+'"><span class="pm-t-w">'+w.w+'</span><span class="pm-t-q">본편 단어 중 '+r.d+' 찾기</span><span class="pm-t-m">'+meanOf(w)+'</span></button>';
 }
 function pmTileR(id,done,cls){
-  var p=PM.pairs[id],w=WORDS[p.wi];
-  return '<button class="pm-tile pm-r'+(done?' done '+cls:'')+'" data-side="R" data-id="'+id+'"><span class="pm-t-w">'+w.w+'</span><span class="pm-t-m">'+meanOf(w)+'</span></button>';
+  var p=PM.pairs[id],hp=WORDS[p.wi].pairs[p.pi];
+  return '<button class="pm-tile pm-r'+(done?' done '+cls:'')+'" data-side="R" data-id="'+id+'"><span class="pm-t-w">'+p.hw+'</span><span class="pm-t-m">'+hp.m+'</span></button>';
 }
 function pmBuild(){
   var wrap=document.getElementById('pm-board');if(!wrap)return;
-  var h='<div class="pm-hdr"><div class="pm-colh">본편 단어</div><div class="pm-colh">확장 단어</div></div>';
+  var h='<div class="pm-hdr"><div class="pm-colh">확장 단어</div><div class="pm-colh">본편 단어</div></div>';
   if(PM.order.length){
     h+='<div class="pm-dgrid">';
     PM.order.forEach(function(o){h+=pmTileL(o[0],true)+pmTileR(o[1],true,REL[PM.pairs[o[0]].k].cls);});
@@ -551,17 +551,17 @@ function pmTap(b){
   var p=PM.pairs[id];
   if(side==='L'){
     document.querySelectorAll('.pm-tile.pm-l.sel').forEach(function(e){e.classList.remove('sel');});
-    b.classList.add('sel');PM.selL=id;seq([function(){return play(hUrl(WORDS[p.wi].pairs[p.pi]),1.0,fbEn(WORDS[p.wi].pairs[p.pi].sp));}]);
+    b.classList.add('sel');PM.selL=id;seq([function(){return playW(p.wi,1.0);}]);
   }else{
     document.querySelectorAll('.pm-tile.pm-r.sel').forEach(function(e){e.classList.remove('sel');});
-    b.classList.add('sel');PM.selR=id;seq([function(){return playW(p.wi,1.0);}]);
+    b.classList.add('sel');PM.selR=id;seq([function(){return playHW(WORDS[p.wi].pairs[p.pi]);}]);
   }
   if(PM.selL!==null&&PM.selR!==null)pmCheck();
 }
 function pmCheck(){
   var l=PM.pairs[PM.selL],r=PM.pairs[PM.selR];
   var q=null;
-  for(var k=0;k<PM.pairs.length;k++){var x=PM.pairs[k];if(!PM.matchedQ[k]&&x.hw===l.hw&&x.wi===r.wi){q=x;break;}}
+  for(var k=0;k<PM.pairs.length;k++){var x=PM.pairs[k];if(!PM.matchedQ[k]&&x.wi===l.wi&&x.hw===r.hw){q=x;break;}}
   var bl=document.querySelector('.pm-tile.pm-l[data-id="'+PM.selL+'"]'),br=document.querySelector('.pm-tile.pm-r[data-id="'+PM.selR+'"]');
   if(q){
     PM.matchedQ[q.id]=true;PM.doneL[PM.selL]=true;PM.doneR[PM.selR]=true;PM.matched++;
@@ -570,14 +570,12 @@ function pmCheck(){
     PM.selL=null;PM.selR=null;
     pmBuild();
     pmShow(q);pmStatus();
-    var w=WORDS[q.wi],hp=w.pairs[q.pi];
-    seq([function(){return playW(q.wi,1.0);}]);
   }else{
     PM.wrong++;PM.busy=true;
     bl.classList.add('bad');br.classList.add('bad');
     var fb=document.getElementById('pm-focus');
     fb.className='pm-focus bad';
-    fb.innerHTML='<div class="pm-fb">🤔 아쉬워요! <b>'+l.hw+'</b>('+REL[l.k].d+')의 짝이 아니에요. 다시 골라 보세요.</div>';
+    fb.innerHTML='<div class="pm-fb">🤔 아쉬워요! <b>'+WORDS[l.wi].w+'</b>의 '+REL[l.k].d+'은 그 단어가 아니에요. 다시 골라 보세요.</div>';
     pmStatus();
     setTimeout(function(){bl.classList.remove('bad','sel');br.classList.remove('bad','sel');PM.selL=null;PM.selR=null;PM.busy=false;},700);
   }
@@ -585,9 +583,9 @@ function pmCheck(){
 function pmCard(q,big){
   var w=WORDS[q.wi],hp=w.pairs[q.pi],r=REL[q.k];
   return '<div class="pm-card '+r.cls+(big?' big':'')+'"><div class="vc-plabel">'+(big?'✅ ':'')+r.n+' · '+r.d+'</div><div class="vc-cmp">'+
-    '<div class="vc-side"><div class="vc-pw head">'+hp.w+'</div><div class="vc-pm">'+hp.m+'</div></div><div class="vc-sym">'+r.sym+'</div>'+
-    '<div class="vc-side"><div class="vc-pw">'+w.w+'</div><div class="vc-pm">'+meanOf(w)+'</div></div></div>'+
-    '<div class="vc-note">'+hp.w+' '+r.sym+' '+w.w+' : '+r.note+'</div>'+
+    '<div class="vc-side"><div class="vc-pw">'+w.w+'</div><div class="vc-pm">'+meanOf(w)+'</div></div><div class="vc-sym">'+r.sym+'</div>'+
+    '<div class="vc-side"><div class="vc-pw head">'+hp.w+'</div><div class="vc-pm">'+hp.m+'</div></div></div>'+
+    '<div class="vc-note">'+w.w+' '+r.sym+' '+hp.w+' : '+r.note+'</div>'+
     (big?'<div class="vc-ex"><div class="vc-en">'+w.enhl+'</div><div class="vc-eko">'+w.enko+'</div></div>':'')+'</div>';
 }
 function pmShow(q){
@@ -598,11 +596,11 @@ function pmShow(q){
   log.insertBefore(d,log.firstChild);
   document.getElementById('pm-logh').style.display='block';
 }
-function pmReplay(id){var q=PM.pairs[id],w=WORDS[q.wi],hp=w.pairs[q.pi];seq([function(){return playHW(hp);},wd(300),function(){return playKo(q.wi);},wd(300),function(){return playW(q.wi,1.0);},wd(300),function(){return playKo(q.wi);}]);}
+function pmReplay(id){var q=PM.pairs[id],hp=WORDS[q.wi].pairs[q.pi];seq([function(){return playW(q.wi,1.0);},wd(300),function(){return playKo(q.wi);},wd(500),function(){return playHW(hp);},wd(300),function(){return playHKo(hp);}]);}
 function pmToggleHint(){PM.hint=!PM.hint;document.getElementById('pm-board').classList.toggle('hint',PM.hint);document.getElementById('pm-hintbtn').textContent=PM.hint?'💡 뜻 힌트 끄기':'💡 뜻 힌트 켜기';}
 function pmReset(){
   stopAll();pmInit();
-  var fb=document.getElementById('pm-focus');fb.className='pm-focus';fb.innerHTML='<div class="pm-fb">왼쪽 단어를 먼저 누르고, 오른쪽에서 짝(비슷한 말 또는 반대말)을 찾아 눌러요.</div>';
+  var fb=document.getElementById('pm-focus');fb.className='pm-focus';fb.innerHTML='<div class="pm-fb">왼쪽 단어를 누르고, 오른쪽 본편 단어 중에서 짝(비슷한 말 또는 반대말)을 찾아 눌러요.</div>';
   document.getElementById('pm-log').innerHTML='';document.getElementById('pm-logh').style.display='none';
   document.getElementById('pm-hintbtn').textContent='💡 뜻 힌트 켜기';
   pmBuild();
