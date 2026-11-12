@@ -531,13 +531,15 @@ function pmBuild(){
   var h='<div class="pm-hdr"><div class="pm-colh">확장 단어</div><div class="pm-colh">본편 단어</div></div>';
   if(PM.order.length){
     h+='<div class="pm-dgrid">';
-    PM.order.forEach(function(o){h+=pmTileL(o[0],true)+pmTileR(o[1],true,REL[PM.pairs[o[0]].k].cls);});
+    PM.order.forEach(function(o){h+=pmTileL(o[0],true)+pmTileR(o[2],true,REL[PM.pairs[o[2]].k].cls);});
     h+='</div><div class="pm-sep"></div>';
   }
   h+='<div class="pm-open"><div class="pm-col">';
   PM.L.forEach(function(id){if(!PM.doneL[id])h+=pmTileL(id,false);});
   h+='</div><div class="pm-col">';
-  PM.R.forEach(function(id){if(!PM.doneR[id])h+=pmTileR(id,false);});
+  // 같은 본편 단어(예: dress)가 두 장이면, 남은 카드에는 아직 안 맞춘 짝의 뜻을 붙여 준다
+  var left={};PM.pairs.forEach(function(x){if(!PM.matchedQ[x.id]){(left[x.hw]=left[x.hw]||[]).push(x.id);}});
+  PM.R.forEach(function(id){if(PM.doneR[id])return;var hw=PM.pairs[id].hw;var qid=(left[hw]&&left[hw].length)?left[hw].shift():id;h+=pmTileR(qid,false).replace('data-id="'+qid+'"','data-id="'+id+'"');});
   h+='</div></div>';
   wrap.innerHTML=h;
   wrap.className='pm-board'+(PM.hint?' hint':'');
@@ -566,7 +568,7 @@ function pmCheck(){
   if(q){
     PM.matchedQ[q.id]=true;PM.doneL[PM.selL]=true;PM.doneR[PM.selR]=true;PM.matched++;
     var cls=REL[q.k].cls;
-    PM.order.push([PM.selL,PM.selR]);
+    PM.order.push([PM.selL,PM.selR,q.id]);
     PM.selL=null;PM.selR=null;
     pmBuild();
     pmShow(q);pmStatus();
