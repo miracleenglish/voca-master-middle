@@ -65,13 +65,13 @@ header h1{font-size:15px;color:#2a6db5;font-weight:700}
 
 /* 단어장 */
 .vocab-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px;margin-bottom:18px}
-.flip-card{height:120px;perspective:800px;cursor:pointer}
+.flip-card{height:164px;perspective:800px;cursor:pointer}
 .flip-inner{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform .4s}
 .flip-card.flipped .flip-inner{transform:rotateY(180deg)}
 .flip-front,.flip-back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border-radius:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:13px;text-align:center;box-shadow:0 2px 6px rgba(0,0,0,.08)}
 .flip-front{background:#fff;border:2px solid #d0dcea}
 .flip-back{background:#2a6db5;color:#fff;transform:rotateY(180deg)}
-.f-word{font-size:18px;font-weight:700;color:#1a3a60}
+.f-word{font-size:22px;font-weight:800;color:#1a3a60;line-height:1.2}
 .f-pos{font-size:11px;color:#8090a8;margin-top:3px}
 .f-snd{font-size:17px;margin-top:6px;color:#2a6db5}
 .f-mean{font-size:14px;font-weight:600}
@@ -136,8 +136,10 @@ header h1{font-size:15px;color:#2a6db5;font-weight:700}
   .panel{padding:13px 11px}
 }
 .tts-tune{display:flex;align-items:center;gap:8px;background:#fff8e6;border:1px solid #f0d998;border-radius:10px;padding:8px 12px;margin:10px 0;font-size:13px;color:#7a5c00;flex-wrap:wrap}.tts-tune b{color:#5a4400}.tts-tune button{background:#ffe9a8;border:none;color:#5a4400;padding:5px 10px;border-radius:7px;font-size:13px;cursor:pointer;font-weight:600}.tts-tune button:hover{background:#ffdd80}.tts-tune .tt-reset{background:#f0e0b0;color:#7a5c00;font-weight:400}
-.f-src{font-size:11px;color:#8d93b0;margin-top:6px;font-weight:700}
-.xp-src{font-size:11px;color:#8d93b0;margin-left:8px;font-weight:700}
+.f-src{display:inline-flex;align-items:center;gap:7px;margin-top:7px;padding:3px 12px 3px 9px;background:#e7f0ff;border:1.5px solid #b7cdf5;border-radius:999px;max-width:94%}
+.f-src-l{font-size:11px;font-weight:800;color:#fff;background:#5b7fc9;border-radius:999px;padding:1px 8px;white-space:nowrap}
+.f-src-w{font-size:16px;font-weight:800;color:#2a4fa8;line-height:1.25}
+.xp-src{display:inline-flex;align-items:center;gap:7px;margin-left:8px;padding:3px 11px 3px 8px;background:#e7f0ff;border:1.5px solid #b7cdf5;border-radius:999px}
 .tag-pos{display:inline-block;background:#e8f0fb;color:#2a6db5;border-radius:6px;padding:1px 7px;font-size:11px;font-weight:700;margin-right:4px}
 .tag-inv{background:rgba(255,255,255,.22);color:#fff}
 .f-mean{line-height:1.7}
@@ -147,7 +149,7 @@ header h1{font-size:15px;color:#2a6db5;font-weight:700}
 .xp-card{background:#fff;border:1px solid #d0dcea;border-radius:12px;padding:15px 17px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
 .xp-top{display:flex;align-items:center;gap:10px;margin-bottom:6px}
 .xp-no{min-width:26px;height:26px;border-radius:50%;background:#e0ecf8;color:#2a6db5;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
-.xp-word{font-size:19px;font-weight:800;color:#1a3a60}
+.xp-word{font-size:22px;font-weight:800;color:#1a3a60}
 .xp-mean{font-size:15px;font-weight:700;color:#c05010;margin-bottom:8px}
 .xp-def{font-size:14.5px;color:#2d3a4a;line-height:1.8;background:#f4f8fc;border-radius:8px;padding:9px 12px;margin-bottom:8px}
 .xp-ex{font-size:14px;color:#3a4a60;line-height:1.7}
@@ -368,7 +370,7 @@ function buildVocab(){
   WORDS.forEach(function(w,i){
     var c=document.createElement('div');c.className='flip-card';
     var back=w.groups.map(function(x){return (x[0]?'<span class="tag-pos tag-inv">'+x[0]+'</span>':'')+x[1];}).join('<br>');
-    c.innerHTML='<div class="flip-inner"><div class="flip-front"><div class="f-word">'+w.w+'</div><div class="f-pos">'+posTags(w)+'</div>'+(w.src?'<div class="f-src">← '+w.src+'</div>':'')+'<div class="f-snd" data-i="'+i+'">🔊</div></div>'+
+    c.innerHTML='<div class="flip-inner"><div class="flip-front"><div class="f-word">'+w.w+'</div><div class="f-pos">'+posTags(w)+'</div>'+(w.src?'<div class="f-src"><span class="f-src-l">본단어</span><span class="f-src-w">'+w.src+'</span></div>':'')+'<div class="f-snd" data-i="'+i+'">🔊</div></div>'+
       '<div class="flip-back"><div class="f-mean">'+back+'</div><div class="f-ex">'+w.en+'</div></div></div>';
     c.onclick=function(){
       var on=c.classList.toggle('flipped');
@@ -388,7 +390,7 @@ function buildExplain(){
   WORDS.forEach(function(w){
     var m=w.groups.map(function(x){return (x[0]?'<span class="tag-pos">'+x[0]+'</span>':'')+x[1];}).join(' &nbsp; ');
     var d=document.createElement('div');d.className='xp-card';
-    d.innerHTML='<div class="xp-top"><span class="xp-no">'+w.i+'</span><span class="xp-word">'+w.w+'</span>'+(w.src?'<span class="xp-src">← '+w.src+'</span>':'')+'</div>'+
+    d.innerHTML='<div class="xp-top"><span class="xp-no">'+w.i+'</span><span class="xp-word">'+w.w+'</span>'+(w.src?'<span class="xp-src"><span class="f-src-l">본단어</span><span class="f-src-w">'+w.src+'</span></span>':'')+'</div>'+
       '<div class="xp-mean">'+m+'</div><div class="xp-def">'+w.defn+'</div>'+
       '<div class="xp-ex"><span class="xp-lbl">예</span> '+hlKo(w.kex)+'</div>';
     c.appendChild(d);
