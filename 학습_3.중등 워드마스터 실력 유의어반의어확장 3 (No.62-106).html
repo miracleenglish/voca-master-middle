@@ -253,7 +253,14 @@ header{padding:12px 18px}
 .pm-tile.bad{animation:pmshake .4s;border-color:#e55;background:#fff2f2}
 @keyframes pmshake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
 .pm-logh{display:none;font-size:15px;font-weight:800;color:#1a3a60;margin:20px 0 8px}
-.pm-logrow{margin-bottom:10px}.pm-logrow .pm-card{padding:10px}.pm-logrow .vc-pw{font-size:20px}.pm-logrow .vc-pm{font-size:16px}.pm-logrow .vc-note{margin-top:6px;font-size:13px}.pm-logrow .vc-sym{font-size:26px}</style>
+.pm-logrow{margin-bottom:10px}.pm-logrow .pm-card{padding:10px}.pm-logrow .vc-pw{font-size:20px}.pm-logrow .vc-pm{font-size:16px}.pm-logrow .vc-note{margin-top:6px;font-size:13px}.pm-logrow .vc-sym{font-size:26px}/* 탭 7개를 한 화면에 모두 보이게: 윗줄 4개 + 아랫줄 3개 */
+.tabs{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;padding:8px 10px;overflow:visible;border-bottom:2px solid #d0dcea}
+.tab-btn{grid-column:span 3;padding:9px 4px;font-size:13px;line-height:1.25;text-align:center;white-space:normal;word-break:keep-all;border:1.5px solid #d0dcea;border-radius:10px;background:#f4f8fd;color:#5a6b86}
+.tab-btn:nth-child(n+5){grid-column:span 4}
+.tab-btn.active{background:#2a6db5;color:#fff;border-color:#2a6db5}
+.tab-btn:hover{color:#2a6db5}
+.tab-btn.active:hover{color:#fff}
+</style>
 </head>
 <body>
 <header>

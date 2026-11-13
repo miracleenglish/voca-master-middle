@@ -180,6 +180,12 @@ header{padding:12px 18px}
 .to-top svg{width:26px;height:26px}
 .to-top span{font-size:13px;font-weight:800;letter-spacing:.5px;line-height:1}
 .to-top.show{display:flex}.to-top:hover{background:#ff6fa5;transform:translateY(-2px)}
+/* 탭 7개를 한 화면에 모두 보이게: 윗줄 4개 + 아랫줄 3개 */
+.tabs{display:grid;grid-template-columns:repeat(12,1fr);gap:6px;padding:8px 10px;overflow:visible;border-bottom:2px solid #d0dcea}
+.tab-btn{grid-column:span 4;padding:9px 4px;font-size:13px;line-height:1.25;text-align:center;white-space:normal;word-break:keep-all;border:1.5px solid #d0dcea;border-radius:10px;background:#f4f8fd;color:#5a6b86}
+.tab-btn.active{background:#2a6db5;color:#fff;border-color:#2a6db5}
+.tab-btn:hover{color:#2a6db5}
+.tab-btn.active:hover{color:#fff}
 </style>
 </head>
 <body>
