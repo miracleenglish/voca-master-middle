@@ -84,14 +84,23 @@
   #ms-nan-dv,#ms-nan-ss{--accent:#2a4fa8;--accent-light:#e7ecfb;}
   #ms-sil-dv{--accent:var(--green);--accent-light:var(--green-light);}
   #ms-sil-ss{--accent:var(--green);--accent-light:var(--green-light);}
-#ms-sup-a{--accent:#2a4fa8;--accent-light:#e7ecfb;}
-#ms-sup-b{--accent:#2a4fa8;--accent-light:#e7ecfb;}
-#ms-sup-c{--accent:#2a4fa8;--accent-light:#e7ecfb;}
+#ms-sup-a{--accent:#0f8a8a;--accent-light:#d6f2f1;border-color:#9fdcd8;}
+#ms-sup-b{--accent:#0f8a8a;--accent-light:#d6f2f1;border-color:#9fdcd8;}
+#ms-sup-c{--accent:#0f8a8a;--accent-light:#d6f2f1;border-color:#9fdcd8;}
 #ms-sup-a .card-grid,#ms-sup-b .card-grid,#ms-sup-c .card-grid{grid-template-columns:repeat(5,150px);gap:12px;justify-content:start;}
 #ms-sup-a .card,#ms-sup-b .card,#ms-sup-c .card{padding:16px 6px 14px;}
 #ms-sup-a .card .range,#ms-sup-b .card .range,#ms-sup-c .card .range{font-size:13px;}
 #ms-sup-a .card .num-badge,#ms-sup-b .card .num-badge,#ms-sup-c .card .num-badge{width:36px;height:36px;font-size:15px;}
 @media(max-width:700px){#ms-sup-a .card-grid,#ms-sup-b .card-grid,#ms-sup-c .card-grid{grid-template-columns:repeat(4,1fr);gap:8px;justify-content:stretch;}#ms-sup-a .card,#ms-sup-b .card,#ms-sup-c .card{padding:14px 2px 12px;}#ms-sup-a .card .range,#ms-sup-b .card .range,#ms-sup-c .card .range{font-size:10.5px;letter-spacing:-.4px;white-space:nowrap;}}
+.sup-label{color:#0f8a8a;margin-top:30px;}
+.sup-label span{font-size:12px;font-weight:600;color:var(--muted);letter-spacing:0;margin-left:8px;text-transform:none;}
+.series-btn.sup{background:#f1fbfb;} .series-btn.sup .sb-icon{background:#d6f2f1;color:#0f8a8a;}
+.series-btn.sup.active,.series-btn.sup:hover{border-color:#6fcfcb;}
+.series-btn.sup.active .sb-name{color:#0f8a8a;}
+#ms-sup-a,#ms-sup-b,#ms-sup-c{--accent:#0f8a8a;--accent-light:#d6f2f1;border-color:#9fdcd8;}
+.series-btn.sup{flex:0 1 calc(33.333% - 8px);}
+@media (max-width:820px){ .series-btn.sup{flex-basis:calc(50% - 6px);} }
+@media (max-width:480px){ .series-btn.sup{flex-basis:100%;} }
   .series-btn.coming{opacity:.55;cursor:not-allowed;box-shadow:none;}
   .series-btn.coming:hover{transform:none;box-shadow:none;}
   .series-btn.coming .sb-icon{background:#eef0f6;color:var(--muted);}
@@ -185,7 +194,7 @@
 </div>
 
 <div class="series-wrap">
-  <div class="series-group-label">중등 시리즈 (2026리뉴얼)</div>
+  <div class="series-group-label">2026 리뉴얼 교재</div>
   <div class="series-bar">
     <button class="series-btn pk active" onclick="showSeries('ms-basic', this)">
       <div class="sb-icon">📘</div><div class="sb-text"><span class="sb-name">워드마스터 베이직</span><span class="sb-sub">No.1~1000 · 100세트</span></div>
@@ -217,13 +226,16 @@
     <button class="series-btn ms4" onclick="showSeries('ms-nan-ss', this)">
       <div class="sb-icon">🔁</div><div class="sb-text"><span class="sb-name">고난도 유의·반의어확장</span><span class="sb-sub">648개 · 65세트</span></div>
     </button>
-    <button class="series-btn ms4" onclick="showSeries('ms-sup-a', this)">
+    </div>
+  <div class="series-group-label sup-label">보충 교재 <span>2022 출간본 → 2026 리뉴얼 사이에 추가된 단어 · 이전 교재로 공부한 학생용</span></div>
+  <div class="series-bar">
+    <button class="series-btn sup" onclick="showSeries('ms-sup-a', this)">
       <div class="sb-icon">📗</div><div class="sb-text"><span class="sb-name">베이직 보충</span><span class="sb-sub">300개 · 30세트</span></div>
     </button>
-    <button class="series-btn ms4" onclick="showSeries('ms-sup-b', this)">
+    <button class="series-btn sup" onclick="showSeries('ms-sup-b', this)">
       <div class="sb-icon">📘</div><div class="sb-text"><span class="sb-name">베이직·실력 보충</span><span class="sb-sub">308개 · 32세트</span></div>
     </button>
-    <button class="series-btn ms4" onclick="showSeries('ms-sup-c', this)">
+    <button class="series-btn sup" onclick="showSeries('ms-sup-c', this)">
       <div class="sb-icon">📕</div><div class="sb-text"><span class="sb-name">베이직·실력·고난도 보충</span><span class="sb-sub">387개 · 40세트</span></div>
     </button>
   </div>
@@ -3864,7 +3876,7 @@
 </div>
 <div id="ms-sup-a" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 베이직 보충 · 300개 · 30세트</h2>
+    <h2>중등 워드마스터 베이직 보충 · 300개 · 30세트</h2><span class="lv sup-badge">보충 · 22 베이직 학습자용</span>
   </div>
 
       <div class="day-section">
@@ -3995,7 +4007,7 @@
 </div>
 <div id="ms-sup-b" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 베이직·실력 보충 · 308개 · 32세트</h2>
+    <h2>중등 워드마스터 베이직·실력 보충 · 308개 · 32세트</h2><span class="lv sup-badge">보충 · 22 베이직+실력 학습자용</span>
   </div>
 
       <div class="day-section">
@@ -4139,7 +4151,7 @@
 </div>
 <div id="ms-sup-c" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 베이직·실력·고난도 보충 · 387개 · 40세트</h2>
+    <h2>중등 워드마스터 베이직·실력·고난도 보충 · 387개 · 40세트</h2><span class="lv sup-badge">보충 · 22 베이직+실력+고난도 학습자용</span>
   </div>
 
       <div class="day-section">
