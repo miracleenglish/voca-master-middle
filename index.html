@@ -84,6 +84,14 @@
   #ms-nan-dv,#ms-nan-ss{--accent:#2a4fa8;--accent-light:#e7ecfb;}
   #ms-sil-dv{--accent:var(--green);--accent-light:var(--green-light);}
   #ms-sil-ss{--accent:var(--green);--accent-light:var(--green-light);}
+#ms-sup-a{--accent:#2a4fa8;--accent-light:#e7ecfb;}
+#ms-sup-b{--accent:#2a4fa8;--accent-light:#e7ecfb;}
+#ms-sup-c{--accent:#2a4fa8;--accent-light:#e7ecfb;}
+#ms-sup-a .card-grid,#ms-sup-b .card-grid,#ms-sup-c .card-grid{grid-template-columns:repeat(5,150px);gap:12px;justify-content:start;}
+#ms-sup-a .card,#ms-sup-b .card,#ms-sup-c .card{padding:16px 6px 14px;}
+#ms-sup-a .card .range,#ms-sup-b .card .range,#ms-sup-c .card .range{font-size:13px;}
+#ms-sup-a .card .num-badge,#ms-sup-b .card .num-badge,#ms-sup-c .card .num-badge{width:36px;height:36px;font-size:15px;}
+@media(max-width:700px){#ms-sup-a .card-grid,#ms-sup-b .card-grid,#ms-sup-c .card-grid{grid-template-columns:repeat(4,1fr);gap:8px;justify-content:stretch;}#ms-sup-a .card,#ms-sup-b .card,#ms-sup-c .card{padding:14px 2px 12px;}#ms-sup-a .card .range,#ms-sup-b .card .range,#ms-sup-c .card .range{font-size:10.5px;letter-spacing:-.4px;white-space:nowrap;}}
   .series-btn.coming{opacity:.55;cursor:not-allowed;box-shadow:none;}
   .series-btn.coming:hover{transform:none;box-shadow:none;}
   .series-btn.coming .sb-icon{background:#eef0f6;color:var(--muted);}
@@ -208,6 +216,15 @@
     </button>
     <button class="series-btn ms4" onclick="showSeries('ms-nan-ss', this)">
       <div class="sb-icon">🔁</div><div class="sb-text"><span class="sb-name">고난도 유의·반의어확장</span><span class="sb-sub">648개 · 65세트</span></div>
+    </button>
+    <button class="series-btn ms4" onclick="showSeries('ms-sup-a', this)">
+      <div class="sb-icon">📗</div><div class="sb-text"><span class="sb-name">베이직 보충</span><span class="sb-sub">300개 · 30세트</span></div>
+    </button>
+    <button class="series-btn ms4" onclick="showSeries('ms-sup-b', this)">
+      <div class="sb-icon">📘</div><div class="sb-text"><span class="sb-name">베이직·실력 보충</span><span class="sb-sub">308개 · 32세트</span></div>
+    </button>
+    <button class="series-btn ms4" onclick="showSeries('ms-sup-c', this)">
+      <div class="sb-icon">📕</div><div class="sb-text"><span class="sb-name">베이직·실력·고난도 보충</span><span class="sb-sub">387개 · 40세트</span></div>
     </button>
   </div>
 </div>
@@ -3841,6 +3858,462 @@
         <a class="card" href="%ED%95%99%EC%8A%B5_65.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EA%B3%A0%EB%82%9C%EB%8F%84%20%EC%9C%A0%EC%9D%98%EC%96%B4%EB%B0%98%EC%9D%98%EC%96%B4%ED%99%95%EC%9E%A5%2065%20%28No.977-994%29.html">
           <span class="num-badge">65</span>
           <span class="range">No.977-994</span>
+        </a>
+        </div>
+      </div>
+</div>
+<div id="ms-sup-a" class="series-panel">
+  <div class="series-head">
+    <h2>중등 워드마스터 베이직 보충 · 300개 · 30세트</h2>
+  </div>
+
+      <div class="day-section">
+        <h2 class="day-title">베이직 추가 단어 (하루 10개)</h2>
+        <div class="card-grid">
+        <a class="card" href="%ED%95%99%EC%8A%B5_1.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%201%20%28No.2-21%29.html">
+          <span class="num-badge">1</span>
+          <span class="range">No.2-21</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_2.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%202%20%28No.23-47%29.html">
+          <span class="num-badge">2</span>
+          <span class="range">No.23-47</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_3.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%203%20%28No.48-88%29.html">
+          <span class="num-badge">3</span>
+          <span class="range">No.48-88</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_4.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%204%20%28No.89-98%29.html">
+          <span class="num-badge">4</span>
+          <span class="range">No.89-98</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_5.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%205%20%28No.106-146%29.html">
+          <span class="num-badge">5</span>
+          <span class="range">No.106-146</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_6.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%206%20%28No.147-194%29.html">
+          <span class="num-badge">6</span>
+          <span class="range">No.147-194</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_7.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%207%20%28No.196-222%29.html">
+          <span class="num-badge">7</span>
+          <span class="range">No.196-222</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_8.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%208%20%28No.223-270%29.html">
+          <span class="num-badge">8</span>
+          <span class="range">No.223-270</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_9.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%209%20%28No.271-298%29.html">
+          <span class="num-badge">9</span>
+          <span class="range">No.271-298</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_10.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2010%20%28No.306-322%29.html">
+          <span class="num-badge">10</span>
+          <span class="range">No.306-322</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_11.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2011%20%28No.323-368%29.html">
+          <span class="num-badge">11</span>
+          <span class="range">No.323-368</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_12.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2012%20%28No.369-391%29.html">
+          <span class="num-badge">12</span>
+          <span class="range">No.369-391</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_13.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2013%20%28No.392-418%29.html">
+          <span class="num-badge">13</span>
+          <span class="range">No.392-418</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_14.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2014%20%28No.419-445%29.html">
+          <span class="num-badge">14</span>
+          <span class="range">No.419-445</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_15.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2015%20%28No.447-473%29.html">
+          <span class="num-badge">15</span>
+          <span class="range">No.447-473</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_16.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2016%20%28No.486-521%29.html">
+          <span class="num-badge">16</span>
+          <span class="range">No.486-521</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_17.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2017%20%28No.522-541%29.html">
+          <span class="num-badge">17</span>
+          <span class="range">No.522-541</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_18.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2018%20%28No.545-570%29.html">
+          <span class="num-badge">18</span>
+          <span class="range">No.545-570</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_19.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2019%20%28No.571-619%29.html">
+          <span class="num-badge">19</span>
+          <span class="range">No.571-619</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_20.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2020%20%28No.620-660%29.html">
+          <span class="num-badge">20</span>
+          <span class="range">No.620-660</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_21.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2021%20%28No.671-697%29.html">
+          <span class="num-badge">21</span>
+          <span class="range">No.671-697</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_22.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2022%20%28No.698-742%29.html">
+          <span class="num-badge">22</span>
+          <span class="range">No.698-742</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_23.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2023%20%28No.743-769%29.html">
+          <span class="num-badge">23</span>
+          <span class="range">No.743-769</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_24.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2024%20%28No.772-817%29.html">
+          <span class="num-badge">24</span>
+          <span class="range">No.772-817</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_25.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2025%20%28No.818-843%29.html">
+          <span class="num-badge">25</span>
+          <span class="range">No.818-843</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_26.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2026%20%28No.844-872%29.html">
+          <span class="num-badge">26</span>
+          <span class="range">No.844-872</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_27.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2027%20%28No.873-911%29.html">
+          <span class="num-badge">27</span>
+          <span class="range">No.873-911</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_28.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2028%20%28No.912-921%29.html">
+          <span class="num-badge">28</span>
+          <span class="range">No.912-921</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_29.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2029%20%28No.922-954%29.html">
+          <span class="num-badge">29</span>
+          <span class="range">No.922-954</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_30.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%20%EB%B3%B4%EC%B6%A9%2030%20%28No.964-997%29.html">
+          <span class="num-badge">30</span>
+          <span class="range">No.964-997</span>
+        </a>
+        </div>
+      </div>
+</div>
+<div id="ms-sup-b" class="series-panel">
+  <div class="series-head">
+    <h2>중등 워드마스터 베이직·실력 보충 · 308개 · 32세트</h2>
+  </div>
+
+      <div class="day-section">
+        <h2 class="day-title">베이직 추가 단어</h2>
+        <div class="card-grid">
+        <a class="card" href="%ED%95%99%EC%8A%B5_1.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%201%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.2-21%29.html">
+          <span class="num-badge">1</span>
+          <span class="range">No.2-21</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_2.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%202%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.35-56%29.html">
+          <span class="num-badge">2</span>
+          <span class="range">No.35-56</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_3.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%203%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.68-92%29.html">
+          <span class="num-badge">3</span>
+          <span class="range">No.68-92</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_4.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%204%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.93-144%29.html">
+          <span class="num-badge">4</span>
+          <span class="range">No.93-144</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_5.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%205%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.145-213%29.html">
+          <span class="num-badge">5</span>
+          <span class="range">No.145-213</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_6.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%206%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.217-248%29.html">
+          <span class="num-badge">6</span>
+          <span class="range">No.217-248</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_7.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%207%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.267-314%29.html">
+          <span class="num-badge">7</span>
+          <span class="range">No.267-314</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_8.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%208%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.315-391%29.html">
+          <span class="num-badge">8</span>
+          <span class="range">No.315-391</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_9.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%209%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.395-469%29.html">
+          <span class="num-badge">9</span>
+          <span class="range">No.395-469</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_10.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2010%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.470-521%29.html">
+          <span class="num-badge">10</span>
+          <span class="range">No.470-521</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_11.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2011%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.523-545%29.html">
+          <span class="num-badge">11</span>
+          <span class="range">No.523-545</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_12.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2012%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.546-571%29.html">
+          <span class="num-badge">12</span>
+          <span class="range">No.546-571</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_13.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2013%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.573-620%29.html">
+          <span class="num-badge">13</span>
+          <span class="range">No.573-620</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_14.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2014%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.621-672%29.html">
+          <span class="num-badge">14</span>
+          <span class="range">No.621-672</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_15.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2015%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.673-719%29.html">
+          <span class="num-badge">15</span>
+          <span class="range">No.673-719</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_16.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2016%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.720-769%29.html">
+          <span class="num-badge">16</span>
+          <span class="range">No.720-769</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_17.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2017%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.772-820%29.html">
+          <span class="num-badge">17</span>
+          <span class="range">No.772-820</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_18.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2018%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.821-909%29.html">
+          <span class="num-badge">18</span>
+          <span class="range">No.821-909</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_19.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2019%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.913-964%29.html">
+          <span class="num-badge">19</span>
+          <span class="range">No.913-964</span>
+        </a>
+        </div>
+      </div>
+      <div class="day-section">
+        <h2 class="day-title">실력 추가 단어</h2>
+        <div class="card-grid">
+        <a class="card" href="%ED%95%99%EC%8A%B5_20.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2020%20%28%EC%8B%A4%EB%A0%A5%20No.12-97%29.html">
+          <span class="num-badge">20</span>
+          <span class="range">No.12-97</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_21.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2021%20%28%EC%8B%A4%EB%A0%A5%20No.104-121%29.html">
+          <span class="num-badge">21</span>
+          <span class="range">No.104-121</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_22.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2022%20%28%EC%8B%A4%EB%A0%A5%20No.127-146%29.html">
+          <span class="num-badge">22</span>
+          <span class="range">No.127-146</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_23.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2023%20%28%EC%8B%A4%EB%A0%A5%20No.147-244%29.html">
+          <span class="num-badge">23</span>
+          <span class="range">No.147-244</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_24.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2024%20%28%EC%8B%A4%EB%A0%A5%20No.245-334%29.html">
+          <span class="num-badge">24</span>
+          <span class="range">No.245-334</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_25.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2025%20%28%EC%8B%A4%EB%A0%A5%20No.348-446%29.html">
+          <span class="num-badge">25</span>
+          <span class="range">No.348-446</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_26.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2026%20%28%EC%8B%A4%EB%A0%A5%20No.447-494%29.html">
+          <span class="num-badge">26</span>
+          <span class="range">No.447-494</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_27.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2027%20%28%EC%8B%A4%EB%A0%A5%20No.495-547%29.html">
+          <span class="num-badge">27</span>
+          <span class="range">No.495-547</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_28.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2028%20%28%EC%8B%A4%EB%A0%A5%20No.552-634%29.html">
+          <span class="num-badge">28</span>
+          <span class="range">No.552-634</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_29.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2029%20%28%EC%8B%A4%EB%A0%A5%20No.646-717%29.html">
+          <span class="num-badge">29</span>
+          <span class="range">No.646-717</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_30.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2030%20%28%EC%8B%A4%EB%A0%A5%20No.718-746%29.html">
+          <span class="num-badge">30</span>
+          <span class="range">No.718-746</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_31.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2031%20%28%EC%8B%A4%EB%A0%A5%20No.747-819%29.html">
+          <span class="num-badge">31</span>
+          <span class="range">No.747-819</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_32.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%20%EB%B3%B4%EC%B6%A9%2032%20%28%EC%8B%A4%EB%A0%A5%20No.820-973%29.html">
+          <span class="num-badge">32</span>
+          <span class="range">No.820-973</span>
+        </a>
+        </div>
+      </div>
+</div>
+<div id="ms-sup-c" class="series-panel">
+  <div class="series-head">
+    <h2>중등 워드마스터 베이직·실력·고난도 보충 · 387개 · 40세트</h2>
+  </div>
+
+      <div class="day-section">
+        <h2 class="day-title">베이직 추가 단어</h2>
+        <div class="card-grid">
+        <a class="card" href="%ED%95%99%EC%8A%B5_1.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%201%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.2-21%29.html">
+          <span class="num-badge">1</span>
+          <span class="range">No.2-21</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_2.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%202%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.35-68%29.html">
+          <span class="num-badge">2</span>
+          <span class="range">No.35-68</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_3.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%203%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.71-93%29.html">
+          <span class="num-badge">3</span>
+          <span class="range">No.71-93</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_4.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%204%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.94-146%29.html">
+          <span class="num-badge">4</span>
+          <span class="range">No.94-146</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_5.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%205%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.147-218%29.html">
+          <span class="num-badge">5</span>
+          <span class="range">No.147-218</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_6.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%206%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.219-270%29.html">
+          <span class="num-badge">6</span>
+          <span class="range">No.219-270</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_7.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%207%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.272-320%29.html">
+          <span class="num-badge">7</span>
+          <span class="range">No.272-320</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_8.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%208%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.321-442%29.html">
+          <span class="num-badge">8</span>
+          <span class="range">No.321-442</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_9.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%209%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.443-494%29.html">
+          <span class="num-badge">9</span>
+          <span class="range">No.443-494</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_10.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2010%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.497-534%29.html">
+          <span class="num-badge">10</span>
+          <span class="range">No.497-534</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_11.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2011%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.537-551%29.html">
+          <span class="num-badge">11</span>
+          <span class="range">No.537-551</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_12.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2012%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.564-596%29.html">
+          <span class="num-badge">12</span>
+          <span class="range">No.564-596</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_13.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2013%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.597-645%29.html">
+          <span class="num-badge">13</span>
+          <span class="range">No.597-645</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_14.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2014%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.646-693%29.html">
+          <span class="num-badge">14</span>
+          <span class="range">No.646-693</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_15.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2015%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.695-746%29.html">
+          <span class="num-badge">15</span>
+          <span class="range">No.695-746</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_16.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2016%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.747-817%29.html">
+          <span class="num-badge">16</span>
+          <span class="range">No.747-817</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_17.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2017%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.818-873%29.html">
+          <span class="num-badge">17</span>
+          <span class="range">No.818-873</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_18.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2018%20%28%EB%B2%A0%EC%9D%B4%EC%A7%81%20No.896-964%29.html">
+          <span class="num-badge">18</span>
+          <span class="range">No.896-964</span>
+        </a>
+        </div>
+      </div>
+      <div class="day-section">
+        <h2 class="day-title">실력 추가 단어</h2>
+        <div class="card-grid">
+        <a class="card" href="%ED%95%99%EC%8A%B5_19.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2019%20%28%EC%8B%A4%EB%A0%A5%20No.12-137%29.html">
+          <span class="num-badge">19</span>
+          <span class="range">No.12-137</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_20.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2020%20%28%EC%8B%A4%EB%A0%A5%20No.139-305%29.html">
+          <span class="num-badge">20</span>
+          <span class="range">No.139-305</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_21.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2021%20%28%EC%8B%A4%EB%A0%A5%20No.354-541%29.html">
+          <span class="num-badge">21</span>
+          <span class="range">No.354-541</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_22.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2022%20%28%EC%8B%A4%EB%A0%A5%20No.542-571%29.html">
+          <span class="num-badge">22</span>
+          <span class="range">No.542-571</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_23.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2023%20%28%EC%8B%A4%EB%A0%A5%20No.597-733%29.html">
+          <span class="num-badge">23</span>
+          <span class="range">No.597-733</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_24.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2024%20%28%EC%8B%A4%EB%A0%A5%20No.734-897%29.html">
+          <span class="num-badge">24</span>
+          <span class="range">No.734-897</span>
+        </a>
+        </div>
+      </div>
+      <div class="day-section">
+        <h2 class="day-title">고난도 추가 단어</h2>
+        <div class="card-grid">
+        <a class="card" href="%ED%95%99%EC%8A%B5_25.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2025%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.91-348%29.html">
+          <span class="num-badge">25</span>
+          <span class="range">No.91-348</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_26.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2026%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.398-765%29.html">
+          <span class="num-badge">26</span>
+          <span class="range">No.398-765</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_27.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2027%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.766-786%29.html">
+          <span class="num-badge">27</span>
+          <span class="range">No.766-786</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_28.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2028%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.788-806%29.html">
+          <span class="num-badge">28</span>
+          <span class="range">No.788-806</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_29.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2029%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.808-823%29.html">
+          <span class="num-badge">29</span>
+          <span class="range">No.808-823</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_30.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2030%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.825-843%29.html">
+          <span class="num-badge">30</span>
+          <span class="range">No.825-843</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_31.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2031%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.845-862%29.html">
+          <span class="num-badge">31</span>
+          <span class="range">No.845-862</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_32.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2032%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.863-877%29.html">
+          <span class="num-badge">32</span>
+          <span class="range">No.863-877</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_33.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2033%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.879-893%29.html">
+          <span class="num-badge">33</span>
+          <span class="range">No.879-893</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_34.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2034%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.894-907%29.html">
+          <span class="num-badge">34</span>
+          <span class="range">No.894-907</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_35.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2035%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.909-925%29.html">
+          <span class="num-badge">35</span>
+          <span class="range">No.909-925</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_36.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2036%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.926-941%29.html">
+          <span class="num-badge">36</span>
+          <span class="range">No.926-941</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_37.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2037%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.944-956%29.html">
+          <span class="num-badge">37</span>
+          <span class="range">No.944-956</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_38.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2038%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.957-970%29.html">
+          <span class="num-badge">38</span>
+          <span class="range">No.957-970</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_39.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2039%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.972-988%29.html">
+          <span class="num-badge">39</span>
+          <span class="range">No.972-988</span>
+        </a>
+        <a class="card" href="%ED%95%99%EC%8A%B5_40.%EC%A4%91%EB%93%B1%20%EC%9B%8C%EB%93%9C%EB%A7%88%EC%8A%A4%ED%84%B0%20%EB%B2%A0%EC%9D%B4%EC%A7%81%C2%B7%EC%8B%A4%EB%A0%A5%C2%B7%EA%B3%A0%EB%82%9C%EB%8F%84%20%EB%B3%B4%EC%B6%A9%2040%20%28%EA%B3%A0%EB%82%9C%EB%8F%84%20No.989-1000%29.html">
+          <span class="num-badge">40</span>
+          <span class="range">No.989-1000</span>
         </a>
         </div>
       </div>
