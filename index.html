@@ -172,6 +172,11 @@
   .to-top svg{width:26px;height:26px}
   .to-top span{font-size:13px;font-weight:800;letter-spacing:.5px;line-height:1}
   .to-top.show{display:flex}.to-top:hover{background:#ff6fa5;transform:translateY(-2px)}
+
+  .mode-toggle{display:inline-flex;gap:6px;margin-left:12px;vertical-align:middle}
+  .mode-toggle button{border:1.5px solid #cfd6e4;background:#fff;color:#556;border-radius:18px;padding:5px 14px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit}
+  .mode-toggle button.on{background:#2a6db5;color:#fff;border-color:#2a6db5}
+  .mode-toggle button.pg.on{background:#e8890c;border-color:#e8890c}
 </style>
 </head>
 <body>
@@ -244,7 +249,7 @@
 <main>
 <div id="ms-basic" class="series-panel show">
   <div class="series-head">
-    <h2>중등 워드마스터 베이직 · No.1~1000</h2>
+    <h2>중등 워드마스터 베이직 · No.1~1000</h2><span class="mode-toggle" data-panel="ms-basic"><button class="on" onclick="setMode('ms-basic','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-basic','play',this)">🎮 스펠링 놀이터</button></span>
   </div>
 
       <div class="day-section">
@@ -850,7 +855,7 @@
 </div>
 <div id="ms-sil" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 실력 · No.1~1000</h2>
+    <h2>중등 워드마스터 실력 · No.1~1000</h2><span class="mode-toggle" data-panel="ms-sil"><button class="on" onclick="setMode('ms-sil','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-sil','play',this)">🎮 스펠링 놀이터</button></span>
   </div>
 
       <div class="day-section">
@@ -1457,7 +1462,7 @@
 
 <div id="ms-nan" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 고난도 · No.1~1000</h2>
+    <h2>중등 워드마스터 고난도 · No.1~1000</h2><span class="mode-toggle" data-panel="ms-nan"><button class="on" onclick="setMode('ms-nan','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-nan','play',this)">🎮 스펠링 놀이터</button></span>
   </div>
 
       <div class="day-section">
@@ -2064,7 +2069,7 @@
 
 <div id="ms-nan2" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 고난도 심화 · No.1~1000</h2>
+    <h2>중등 워드마스터 고난도 심화 · No.1~1000</h2><span class="mode-toggle" data-panel="ms-nan2"><button class="on" onclick="setMode('ms-nan2','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-nan2','play',this)">🎮 스펠링 놀이터</button></span>
   </div>
 
       <div class="day-section">
@@ -2670,7 +2675,7 @@
 </div>
 <div id="ms-dv" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 베이직 파생어확장 · 216개 · 22세트</h2>
+    <h2>중등 워드마스터 베이직 파생어확장 · 216개 · 22세트</h2><span class="mode-toggle" data-panel="ms-dv"><button class="on" onclick="setMode('ms-dv','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-dv','play',this)">🎮 스펠링 놀이터</button></span>
   </div>
 
       <div class="day-section">
@@ -2769,7 +2774,7 @@
 </div>
 <div id="ms-ss" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 베이직 유의어·반의어확장 · 152개 · 16세트</h2>
+    <h2>중등 워드마스터 베이직 유의어·반의어확장 · 152개 · 16세트</h2><span class="mode-toggle" data-panel="ms-ss"><button class="on" onclick="setMode('ms-ss','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-ss','play',this)">🎮 스펠링 놀이터</button></span>
   </div>
 
       <div class="day-section">
@@ -2844,7 +2849,7 @@
 </div>
 <div id="ms-sil-dv" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 실력 파생어확장 · 488개 · 49세트</h2>
+    <h2>중등 워드마스터 실력 파생어확장 · 488개 · 49세트</h2><span class="mode-toggle" data-panel="ms-sil-dv"><button class="on" onclick="setMode('ms-sil-dv','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-sil-dv','play',this)">🎮 스펠링 놀이터</button></span>
   </div>
 
       <div class="day-section">
@@ -3051,7 +3056,7 @@
 </div>
 <div id="ms-sil-ss" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 실력 유의·반의어확장 · 345개 · 35세트</h2>
+    <h2>중등 워드마스터 실력 유의·반의어확장 · 345개 · 35세트</h2><span class="mode-toggle" data-panel="ms-sil-ss"><button class="on" onclick="setMode('ms-sil-ss','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-sil-ss','play',this)">🎮 스펠링 놀이터</button></span>
   </div>
 
       <div class="day-section">
@@ -3202,7 +3207,7 @@
 </div>
 <div id="ms-nan-dv" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 고난도 파생어확장 · 978개 · 98세트</h2>
+    <h2>중등 워드마스터 고난도 파생어확장 · 978개 · 98세트</h2><span class="mode-toggle" data-panel="ms-nan-dv"><button class="on" onclick="setMode('ms-nan-dv','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-nan-dv','play',this)">🎮 스펠링 놀이터</button></span>
   </div>
 
       <div class="day-section">
@@ -3605,7 +3610,7 @@
 </div>
 <div id="ms-nan-ss" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 고난도 유의·반의어확장 · 648개 · 65세트</h2>
+    <h2>중등 워드마스터 고난도 유의·반의어확장 · 648개 · 65세트</h2><span class="mode-toggle" data-panel="ms-nan-ss"><button class="on" onclick="setMode('ms-nan-ss','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-nan-ss','play',this)">🎮 스펠링 놀이터</button></span>
   </div>
 
       <div class="day-section">
@@ -3876,7 +3881,7 @@
 </div>
 <div id="ms-sup-a" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 베이직 보충 · 300개 · 30세트</h2><span class="lv sup-badge">보충 · 22 베이직 학습자용</span>
+    <h2>중등 워드마스터 베이직 보충 · 300개 · 30세트</h2><span class="mode-toggle" data-panel="ms-sup-a"><button class="on" onclick="setMode('ms-sup-a','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-sup-a','play',this)">🎮 스펠링 놀이터</button></span><span class="lv sup-badge">보충 · 22 베이직 학습자용</span>
   </div>
 
       <div class="day-section">
@@ -4007,7 +4012,7 @@
 </div>
 <div id="ms-sup-b" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 베이직·실력 보충 · 308개 · 32세트</h2><span class="lv sup-badge">보충 · 22 베이직+실력 학습자용</span>
+    <h2>중등 워드마스터 베이직·실력 보충 · 308개 · 32세트</h2><span class="mode-toggle" data-panel="ms-sup-b"><button class="on" onclick="setMode('ms-sup-b','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-sup-b','play',this)">🎮 스펠링 놀이터</button></span><span class="lv sup-badge">보충 · 22 베이직+실력 학습자용</span>
   </div>
 
       <div class="day-section">
@@ -4151,7 +4156,7 @@
 </div>
 <div id="ms-sup-c" class="series-panel">
   <div class="series-head">
-    <h2>중등 워드마스터 베이직·실력·고난도 보충 · 387개 · 40세트</h2><span class="lv sup-badge">보충 · 22 베이직+실력+고난도 학습자용</span>
+    <h2>중등 워드마스터 베이직·실력·고난도 보충 · 387개 · 40세트</h2><span class="mode-toggle" data-panel="ms-sup-c"><button class="on" onclick="setMode('ms-sup-c','study',this)">📖 학습</button><button class="pg" onclick="setMode('ms-sup-c','play',this)">🎮 스펠링 놀이터</button></span><span class="lv sup-badge">보충 · 22 베이직+실력+고난도 학습자용</span>
   </div>
 
       <div class="day-section">
@@ -4347,6 +4352,12 @@ function showSeries(id, btn){
   document.querySelectorAll('.series-panel').forEach(p => p.classList.remove('show'));
   const el = document.getElementById(id);
   if(el) el.classList.add('show');
+}
+function setMode(pid,mode,btn){
+  const panel=document.getElementById(pid); if(!panel) return;
+  btn.parentNode.querySelectorAll('button').forEach(b=>b.classList.remove('on')); btn.classList.add('on');
+  const from=mode==='play'?'%ED%95%99%EC%8A%B5_':'%EB%86%80%EC%9D%B4%ED%84%B0_', to=mode==='play'?'%EB%86%80%EC%9D%B4%ED%84%B0_':'%ED%95%99%EC%8A%B5_';
+  panel.querySelectorAll('a.card').forEach(a=>{const x=a.getAttribute('href'); if(x&&x.indexOf(from)===0) a.setAttribute('href',to+x.slice(from.length));});
 }
 </script>
 </body>
